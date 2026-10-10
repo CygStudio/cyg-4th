@@ -51,5 +51,12 @@
     "實體手機效能",
     "外部網站內容驗收",
     "使用者美術驗收"
-  ]
+  ],
+  "narrowScreen": {
+    "status": "PASS",
+    "width": 320,
+    "horizontalOverflow": false,
+    "headingInViewport": true,
+    "panorama": []
+  }
 }

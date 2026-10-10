@@ -85,5 +85,12 @@
       }
     ],
     "reducedMotionSwitch": true
+  },
+  "narrowScreen": {
+    "status": "PASS",
+    "width": 320,
+    "horizontalOverflow": false,
+    "headingInViewport": true,
+    "panorama": []
   }
 }

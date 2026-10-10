@@ -32,8 +32,8 @@
     }
   ],
   "motionSample": {
-    "after": "matrix(0.697888, 0.716207, -0.716207, 0.697888, -11.4356, 265.877)",
-    "before": "matrix(0.705624, 0.708586, -0.708586, 0.705624, -11.28, 262.26)"
+    "after": "matrix(0.699885, 0.714255, -0.714255, 0.699885, -11.3956, 264.947)",
+    "before": "matrix(0.707381, 0.706833, -0.706833, 0.707381, -11.2444, 261.433)"
   },
   "pauseControl": {
     "off": true,
@@ -51,5 +51,12 @@
     "實體手機效能",
     "外部網站內容驗收",
     "使用者美術驗收"
-  ]
+  ],
+  "narrowScreen": {
+    "status": "PASS",
+    "width": 320,
+    "horizontalOverflow": false,
+    "headingInViewport": true,
+    "panorama": []
+  }
 }

@@ -4,3 +4,6 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}[data-parallax]{will-change:auto}}
 body.motion-off{scroll-behavior:auto}.motion-off *{animation-play-state:paused!important}.motion-off [data-parallax]{will-change:auto}
 .brand{flex-shrink:0}.brand b{white-space:nowrap}nav a{white-space:nowrap}@media(max-width:760px){.brand em{display:none}.site-header{padding:16px}.brand{gap:7px}nav{gap:12px}.site-header .brand b{font-size:21px}}
+.story-photo img[src*="picnic"]{aspect-ratio:auto;object-fit:contain}
+
+@media(max-width:380px){.gift-rules{grid-template-columns:1fr}.gift-rule{padding:25px}.quantity span{display:inline-block}}

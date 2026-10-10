@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "builtPages": 10,
+  "localReferencesFetched": 34,
+  "rawAssetsExcludedFromBuild": true,
+  "gallery": {
+    "pages": 10,
+    "desktopImagesLoaded": 10,
+    "mobileWidth": 390,
+    "horizontalOverflow": false
+  },
+  "keyboard": {
+    "page": "10-cinema",
+    "skipLink": true,
+    "carousel": true,
+    "faq": true
+  },
+  "resourceFailure": {
+    "page": "10-cinema",
+    "blocked": [
+      "GSAP and ScrollTrigger",
+      "WebP images"
+    ],
+    "activityTextVisible": true,
+    "faqOperable": true,
+    "carouselStateOperable": true,
+    "pageErrors": []
+  },
+  "notRun": [
+    "實體手機效能",
+    "外部頁面內容驗收",
+    "素材延遲情境",
+    "使用者美術驗收"
+  ]
+}
