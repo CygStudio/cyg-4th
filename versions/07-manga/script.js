@@ -1,0 +1,2 @@
+import { mountMotion } from '../../shared/motion.js';
+mountMotion({intro(tl){tl.from('.title-panel',{x:40,opacity:0,duration:.5}).from('.character-panel',{x:-70,opacity:0,duration:.55},.2).from('.cafe-panel,.chibi-panel',{y:50,opacity:0,stagger:.2,duration:.5},.45).from('.sound-effect,.speech',{scale:0,ease:'back.out(2)'},.8)},ambient(g){return [g.to('.burst',{rotation:-5,duration:2,repeat:-1,yoyo:true,ease:'sine.inOut'}),g.to('.chibi-panel img',{y:-9,duration:1.8,repeat:-1,yoyo:true,ease:'sine.inOut'})]}});
