@@ -21,7 +21,8 @@ run('screenshot',str(art/'desktop.png'))
 initial=ev("({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,title:document.title,triggers:ScrollTrigger.getAll().length})")
 assert initial['width']==initial['scrollWidth'],initial
 assert initial['triggers']>0,initial
-motion=ev("new Promise(resolve=>{const el=document.querySelector('.petal')||document.querySelector('[data-parallax]');const before=el?getComputedStyle(el).transform:null;requestAnimationFrame(()=>requestAnimationFrame(()=>resolve({before,after:el?getComputedStyle(el).transform:null})))})")
+motion=ev("new Promise(resolve=>{const tween=gsap.globalTimeline.getChildren(true,true,false).find(t=>t.repeat()===-1);const el=tween?.targets()[0];const before=el?getComputedStyle(el).transform:null;requestAnimationFrame(()=>requestAnimationFrame(()=>resolve({before,after:el?getComputedStyle(el).transform:null})))})")
+assert motion['before'] != motion['after'], motion
 ev("document.querySelector('#gifts').scrollIntoView({behavior:'instant'})")
 run('wait','--fn',"[...document.images].filter(i=>i.getBoundingClientRect().top<innerHeight).every(i=>i.complete&&i.naturalWidth>0)")
 run('find','role','button','click','--name','複製活動 TAG')

@@ -1,0 +1,2 @@
+import { mountMotion } from '../../shared/motion.js';
+mountMotion({intro(tl){tl.from('.signal-character',{x:-80,opacity:0,duration:1.15}).from('.signal-band',{xPercent:-100,ease:'power4.out'},.1).from('.hero-copy > *',{x:35,opacity:0,stagger:.12},.2)},ambient(g){return [g.to('.scanline',{y:800,duration:6,repeat:-1,ease:'none'}),g.to('.frequency',{scaleY:.45,transformOrigin:'bottom',duration:.6,repeat:-1,yoyo:true,ease:'steps(4)'})]}});
