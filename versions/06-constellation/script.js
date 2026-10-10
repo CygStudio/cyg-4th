@@ -1,0 +1,2 @@
+import { mountMotion } from '../../shared/motion.js';
+mountMotion({intro(tl){tl.from('.orbit',{scale:.65,opacity:0,stagger:.15,duration:1.3}).from('.celestial-character',{y:40,opacity:0,duration:1.4},.3).from('.hero-copy > *',{y:24,opacity:0,stagger:.12},.4)},ambient(g){return [g.to('.orbit.one',{rotation:360,duration:75,repeat:-1,ease:'none'}),g.to('.orbit.two',{rotation:-360,duration:100,repeat:-1,ease:'none'}),g.to('.small-star',{scale:.75,duration:3,stagger:.5,repeat:-1,yoyo:true,ease:'sine.inOut'})]}});
