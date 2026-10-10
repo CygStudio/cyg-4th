@@ -61,5 +61,12 @@
     "name": "紅蝶標本",
     "english": "CRIMSON RELIQUARY",
     "summary": "以紅蝶、尖拱與古金細線收藏四年的記憶。深紅玻璃窗般的光，映照一場華麗而私密的週年紀念。"
+  },
+  {
+    "number": "10",
+    "slug": "10-cinema",
+    "name": "四季放映室",
+    "english": "SEASONS ON SCREEN",
+    "summary": "把四年的喜歡投影成電影。寬銀幕、膠卷齒孔與可切換的三幕插畫，讓訪客親手翻看熙光。"
   }
 ]
