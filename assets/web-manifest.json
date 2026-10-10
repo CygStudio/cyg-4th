@@ -1,0 +1,184 @@
+[
+  {
+    "name": "keyvisual",
+    "source": "assets/originals/keyvisual/01-梓Azusa_熙歌週年委託 (1).png",
+    "output": "assets/web/keyvisual.webp",
+    "originalSize": [
+      6732,
+      4724
+    ],
+    "webSize": [
+      2000,
+      1403
+    ],
+    "bytes": 203820
+  },
+  {
+    "name": "picnic",
+    "source": "assets/originals/lying/01-0612.png",
+    "output": "assets/web/picnic.webp",
+    "originalSize": [
+      4394,
+      1559
+    ],
+    "webSize": [
+      2000,
+      710
+    ],
+    "bytes": 169330
+  },
+  {
+    "name": "portrait",
+    "source": "assets/originals/standee/01-D.png",
+    "output": "assets/web/portrait.webp",
+    "originalSize": [
+      2894,
+      4134
+    ],
+    "webSize": [
+      980,
+      1400
+    ],
+    "bytes": 148842
+  },
+  {
+    "name": "portrait-clean",
+    "source": "assets/originals/standee/02-C.png",
+    "output": "assets/web/portrait-clean.webp",
+    "originalSize": [
+      2894,
+      4134
+    ],
+    "webSize": [
+      980,
+      1400
+    ],
+    "bytes": 152968
+  },
+  {
+    "name": "lantern",
+    "source": "assets/originals/commission/01-CYG.png",
+    "output": "assets/web/lantern.webp",
+    "originalSize": [
+      1660,
+      2335
+    ],
+    "webSize": [
+      924,
+      1300
+    ],
+    "bytes": 180858
+  },
+  {
+    "name": "lantern-alt",
+    "source": "assets/originals/commission/03-CYG_2.png",
+    "output": "assets/web/lantern-alt.webp",
+    "originalSize": [
+      1660,
+      2335
+    ],
+    "webSize": [
+      924,
+      1300
+    ],
+    "bytes": 185436
+  },
+  {
+    "name": "lantern-bg",
+    "source": "assets/originals/commission/02-CYG_BG.jpg",
+    "output": "assets/web/lantern-bg.webp",
+    "originalSize": [
+      1660,
+      2335
+    ],
+    "webSize": [
+      1066,
+      1500
+    ],
+    "bytes": 529576
+  },
+  {
+    "name": "lantern-scene",
+    "source": "assets/originals/commission/04-CYG.jpg",
+    "output": "assets/web/lantern-scene.webp",
+    "originalSize": [
+      1660,
+      2335
+    ],
+    "webSize": [
+      1066,
+      1500
+    ],
+    "bytes": 565938
+  },
+  {
+    "name": "chibi",
+    "source": "assets/originals/chibi/02-cygnus_4ani_chibi_com.png",
+    "output": "assets/web/chibi.webp",
+    "originalSize": [
+      2000,
+      2000
+    ],
+    "webSize": [
+      650,
+      650
+    ],
+    "bytes": 55178
+  },
+  {
+    "name": "chibi-autumn",
+    "source": "assets/originals/chibi/06-cygnus_4ani_chibi_com2.png",
+    "output": "assets/web/chibi-autumn.webp",
+    "originalSize": [
+      2000,
+      2000
+    ],
+    "webSize": [
+      650,
+      650
+    ],
+    "bytes": 70926
+  },
+  {
+    "name": "chibi-smile",
+    "source": "assets/originals/chibi/01-cygnus_4ani_chibi_com1.png",
+    "output": "assets/web/chibi-smile.webp",
+    "originalSize": [
+      2000,
+      2000
+    ],
+    "webSize": [
+      650,
+      650
+    ],
+    "bytes": 54456
+  },
+  {
+    "name": "promo",
+    "source": "assets/originals/promo/01-_DSC1276 16 9.jpg",
+    "output": "assets/web/promo.webp",
+    "originalSize": [
+      6000,
+      3376
+    ],
+    "webSize": [
+      1800,
+      1013
+    ],
+    "bytes": 224992
+  },
+  {
+    "name": "promo-lettered",
+    "source": "assets/originals/promo/02-_DSC1276加字 16 9 修正.jpg",
+    "output": "assets/web/promo-lettered.webp",
+    "originalSize": [
+      6000,
+      3376
+    ],
+    "webSize": [
+      1800,
+      1013
+    ],
+    "bytes": 246552
+  }
+]
