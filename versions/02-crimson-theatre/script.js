@@ -1,0 +1,2 @@
+import { mountMotion } from '../../shared/motion.js';
+mountMotion({intro(tl){tl.from('.curtain.left',{xPercent:-35,duration:1.4}).from('.curtain.right',{xPercent:35,duration:1.4},0).from('.stage-character',{y:65,opacity:0,duration:1.5},.3).from('.stage-side',{y:40,opacity:0,stagger:.2},.4).from('.hero-copy > *',{y:25,opacity:0,stagger:.12},.7)},ambient(g){return [g.to('.spot-a',{rotation:18,duration:7,repeat:-1,yoyo:true,ease:'sine.inOut'}),g.to('.spot-b',{rotation:-18,duration:8,repeat:-1,yoyo:true,ease:'sine.inOut'})]}});

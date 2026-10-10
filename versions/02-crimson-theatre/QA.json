@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "desktop": {
+    "scrollWidth": 1440,
+    "title": "熙歌四週年｜緋夜劇場",
+    "triggers": 13,
+    "width": 1440
+  },
+  "mobile": {
+    "links": [
+      "https://youtube.com/@cygnusxdfp",
+      "https://www.google.com/maps/search/?api=1&query=106%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E6%95%A6%E7%85%8C%E9%87%8C%E4%BF%A1%E7%BE%A9%E8%B7%AF%E5%9B%9B%E6%AE%B5265%E5%B7%B712%E5%BC%8421%E8%99%9F",
+      "https://x.com/cyg_studio_fan",
+      "https://x.com/cygnusxdfp",
+      "https://youtube.com/@cygnusxdfp"
+    ],
+    "scrollWidth": 390,
+    "width": 390
+  },
+  "images": [
+    {
+      "loaded": true,
+      "src": "../../assets/web/portrait.webp"
+    },
+    {
+      "loaded": true,
+      "src": "../../assets/web/keyvisual.webp"
+    },
+    {
+      "loaded": true,
+      "src": "../../assets/web/chibi-autumn.webp"
+    }
+  ],
+  "motionSample": {
+    "after": "matrix(0.716749, 0.697331, -0.697331, 0.716749, -11.0533, 265.28)",
+    "before": "matrix(0.724065, 0.689732, -0.689732, 0.724065, -10.9022, 261.653)"
+  },
+  "pauseControl": {
+    "off": true,
+    "triggers": 0
+  },
+  "reducedMotion": {
+    "headingVisible": true,
+    "off": true,
+    "triggers": 0
+  },
+  "copyTag": "已複製 #四季熙光皆成歌",
+  "faqExpanded": true,
+  "pageErrors": [],
+  "notRun": [
+    "實體手機效能",
+    "外部網站內容驗收",
+    "使用者美術驗收"
+  ]
+}
