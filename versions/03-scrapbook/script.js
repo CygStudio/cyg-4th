@@ -1,0 +1,2 @@
+import { mountMotion } from '../../shared/motion.js';
+mountMotion({intro(tl){tl.from('.hero-copy > *',{y:20,opacity:0,stagger:.08}).from('.main-photo',{rotation:16,y:70,opacity:0,duration:1.1,ease:'back.out(1.3)'},.1).from('.small-photo',{rotation:-18,x:-40,opacity:0},.5).from('.sticker-chibi,.round-sticker',{scale:0,stagger:.15,ease:'back.out(2)'},.8)},ambient(g){return [g.to('.sticker-chibi',{y:-12,rotation:4,duration:2.3,repeat:-1,yoyo:true,ease:'sine.inOut'}),g.to('.draw-star',{rotation:32,duration:4,repeat:-1,yoyo:true})]}});
