@@ -1,0 +1,2 @@
+import { mountMotion } from '../../shared/motion.js';
+mountMotion({intro(tl){tl.from('.gothic-portrait',{scale:.94,opacity:0,duration:1.4}).from('.rose-window',{rotation:-25,opacity:0,duration:1.8},0).from('.hero-copy > *',{y:25,opacity:0,stagger:.15},.4)},ambient(g){return [g.to('.butterfly-a',{y:-18,rotation:2,duration:3,repeat:-1,yoyo:true,ease:'sine.inOut'}),g.to('.butterfly-b',{y:22,rotation:8,duration:4,repeat:-1,yoyo:true,ease:'sine.inOut'}),g.to('.rose-window span',{rotation:360,duration:120,repeat:-1,ease:'none'})]}});
