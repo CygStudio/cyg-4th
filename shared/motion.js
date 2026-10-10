@@ -6,15 +6,16 @@ export function mountMotion(config = {}) {
   let cleanup = () => {};
   function setup() {
     cleanup();
+    window.__introDone = false;
     const off = preference.matches || manualOff;
     document.body.classList.toggle('motion-off', off);
     toggle.textContent = off ? '動態：關閉' : '動態：開啟';
     toggle.setAttribute('aria-pressed', String(!off));
-    if (off || !gsap || !ScrollTrigger) { window.__motionReady = true; return; }
+    if (off || !gsap || !ScrollTrigger) { window.__motionReady = true; window.__introDone = true; return; }
     gsap.registerPlugin(ScrollTrigger);
     const loops = [];
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { duration: .9, ease: 'power3.out' } });
+      const tl = gsap.timeline({ defaults: { duration: .9, ease: 'power3.out' }, onComplete: () => { window.__introDone = true; } });
       if (config.intro) config.intro(tl, gsap);
       else tl.from('.hero-copy > *', { y: 24, opacity: 0, stagger: .1 });
       document.querySelectorAll('[data-reveal]').forEach(el => {
