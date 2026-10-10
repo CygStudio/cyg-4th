@@ -1,0 +1,2 @@
+import { mountMotion } from '../../shared/motion.js';
+mountMotion({intro(tl){tl.from('.cafe-awning',{yPercent:-100,duration:.7}).from('.cafe-sign',{rotation:-8,scale:.9,opacity:0,ease:'back.out(1.5)'},.2).from('.cafe-window',{y:40,opacity:0,duration:1.3},.3).from('.hero-copy > p,.hero-date,.hero-actions',{y:20,opacity:0,stagger:.12},.6)},ambient(g){return [g.to('.steam',{y:-17,opacity:.15,duration:2.4,stagger:.7,repeat:-1,ease:'sine.out'}),g.to('.open-sign',{rotation:5,duration:4,repeat:-1,yoyo:true,ease:'sine.inOut'})]}});
