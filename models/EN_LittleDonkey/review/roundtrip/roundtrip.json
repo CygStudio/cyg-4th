@@ -1,0 +1,644 @@
+{
+  "file": "/Users/sid/Developer/cyg-4th/cafe/assets/little-donkey.glb",
+  "errors": [],
+  "meshes": [
+    {
+      "name": "EN_LittleDonkey_floor_Oak_LOD0",
+      "tris": 44,
+      "verts": 126,
+      "uv": true,
+      "materials": [
+        "Oak"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_floor_Concrete_LOD0",
+      "tris": 12,
+      "verts": 24,
+      "uv": true,
+      "materials": [
+        "Concrete"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_windows_Metal_LOD0",
+      "tris": 132,
+      "verts": 264,
+      "uv": true,
+      "materials": [
+        "Metal"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_windows_Glass_LOD0",
+      "tris": 60,
+      "verts": 120,
+      "uv": true,
+      "materials": [
+        "Glass"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_windows_Plaster_LOD0",
+      "tris": 12,
+      "verts": 24,
+      "uv": true,
+      "materials": [
+        "Plaster"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_shell_Plaster_LOD0",
+      "tris": 36,
+      "verts": 72,
+      "uv": true,
+      "materials": [
+        "Plaster"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_roof_Plaster_LOD0",
+      "tris": 12,
+      "verts": 24,
+      "uv": true,
+      "materials": [
+        "Plaster"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_tilewall_Grout_LOD0",
+      "tris": 12,
+      "verts": 24,
+      "uv": true,
+      "materials": [
+        "Grout"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_tilewall_Tile_LOD0",
+      "tris": 7084,
+      "verts": 19594,
+      "uv": true,
+      "materials": [
+        "Tile"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_tilewall_Oak_LOD0",
+      "tris": 12,
+      "verts": 24,
+      "uv": true,
+      "materials": [
+        "Oak"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_bench_Oak_LOD0",
+      "tris": 44,
+      "verts": 129,
+      "uv": true,
+      "materials": [
+        "Oak"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_bench_OakLight_LOD0",
+      "tris": 44,
+      "verts": 120,
+      "uv": true,
+      "materials": [
+        "OakLight"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_bench_Cushion_LOD0",
+      "tris": 120,
+      "verts": 192,
+      "uv": true,
+      "materials": [
+        "Cushion"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_bench_Red_LOD0",
+      "tris": 120,
+      "verts": 192,
+      "uv": true,
+      "materials": [
+        "Red"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_tables_Walnut_LOD0",
+      "tris": 220,
+      "verts": 580,
+      "uv": true,
+      "materials": [
+        "Walnut"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_tables_Coffee_LOD0",
+      "tris": 72,
+      "verts": 144,
+      "uv": true,
+      "materials": [
+        "Coffee"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_chairs_Oak_LOD0",
+      "tris": 1320,
+      "verts": 3452,
+      "uv": true,
+      "materials": [
+        "Oak"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_chairs_Walnut_LOD0",
+      "tris": 1568,
+      "verts": 2764,
+      "uv": true,
+      "materials": [
+        "Walnut"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_chairs_Metal_LOD0",
+      "tris": 1792,
+      "verts": 3264,
+      "uv": true,
+      "materials": [
+        "Metal"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_tables_Oak_LOD0",
+      "tris": 132,
+      "verts": 345,
+      "uv": true,
+      "materials": [
+        "Oak"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_tables_Metal_LOD0",
+      "tris": 520,
+      "verts": 856,
+      "uv": true,
+      "materials": [
+        "Metal"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_tables_OakLight_LOD0",
+      "tris": 88,
+      "verts": 244,
+      "uv": true,
+      "materials": [
+        "OakLight"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_tables_Porcelain_LOD0",
+      "tris": 220,
+      "verts": 409,
+      "uv": true,
+      "materials": [
+        "Porcelain"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_projection_Concrete_LOD0",
+      "tris": 44,
+      "verts": 121,
+      "uv": true,
+      "materials": [
+        "Concrete"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_projection_Porcelain_LOD0",
+      "tris": 36,
+      "verts": 72,
+      "uv": true,
+      "materials": [
+        "Porcelain"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_projection_Glass_LOD0",
+      "tris": 12,
+      "verts": 24,
+      "uv": true,
+      "materials": [
+        "Glass"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_projection_Metal_LOD0",
+      "tris": 40,
+      "verts": 72,
+      "uv": true,
+      "materials": [
+        "Metal"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_projection_Screen_LOD0",
+      "tris": 12,
+      "verts": 24,
+      "uv": true,
+      "materials": [
+        "Screen"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_ceiling_Metal_LOD0",
+      "tris": 332,
+      "verts": 618,
+      "uv": true,
+      "materials": [
+        "Metal"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_ceiling_Silver_LOD0",
+      "tris": 196,
+      "verts": 336,
+      "uv": true,
+      "materials": [
+        "Silver"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_ceiling_Blue_LOD0",
+      "tris": 60,
+      "verts": 96,
+      "uv": true,
+      "materials": [
+        "Blue"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_ceiling_Porcelain_LOD0",
+      "tris": 288,
+      "verts": 480,
+      "uv": true,
+      "materials": [
+        "Porcelain"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_ceiling_Brass_LOD0",
+      "tris": 240,
+      "verts": 418,
+      "uv": true,
+      "materials": [
+        "Brass"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_ceiling_Bulb_LOD0",
+      "tris": 480,
+      "verts": 1076,
+      "uv": true,
+      "materials": [
+        "Bulb"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_historic_Concrete_LOD0",
+      "tris": 44,
+      "verts": 121,
+      "uv": true,
+      "materials": [
+        "Concrete"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_historic_Porcelain_LOD0",
+      "tris": 668,
+      "verts": 1237,
+      "uv": true,
+      "materials": [
+        "Porcelain"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_historic_Silver_LOD0",
+      "tris": 24,
+      "verts": 48,
+      "uv": true,
+      "materials": [
+        "Silver"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_historic_Blue_LOD0",
+      "tris": 292,
+      "verts": 542,
+      "uv": true,
+      "materials": [
+        "Blue"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_historic_Metal_LOD0",
+      "tris": 216,
+      "verts": 420,
+      "uv": true,
+      "materials": [
+        "Metal"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_historic_Coffee_LOD0",
+      "tris": 120,
+      "verts": 192,
+      "uv": true,
+      "materials": [
+        "Coffee"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_historic_Glass_LOD0",
+      "tris": 56,
+      "verts": 96,
+      "uv": true,
+      "materials": [
+        "Glass"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_historic_OakLight_LOD0",
+      "tris": 176,
+      "verts": 288,
+      "uv": true,
+      "materials": [
+        "OakLight"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_main_Oak_LOD0",
+      "tris": 12,
+      "verts": 24,
+      "uv": true,
+      "materials": [
+        "Oak"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_main_Metal_LOD0",
+      "tris": 44,
+      "verts": 111,
+      "uv": true,
+      "materials": [
+        "Metal"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_main_Brass_LOD0",
+      "tris": 12,
+      "verts": 24,
+      "uv": true,
+      "materials": [
+        "Brass"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_props_Porcelain_LOD0",
+      "tris": 828,
+      "verts": 1442,
+      "uv": true,
+      "materials": [
+        "Porcelain"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_props_Coffee_LOD0",
+      "tris": 240,
+      "verts": 384,
+      "uv": true,
+      "materials": [
+        "Coffee"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_props_Red_LOD0",
+      "tris": 44,
+      "verts": 120,
+      "uv": true,
+      "materials": [
+        "Red"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_patio_Concrete_LOD0",
+      "tris": 12,
+      "verts": 24,
+      "uv": true,
+      "materials": [
+        "Concrete"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_patio_Metal_LOD0",
+      "tris": 108,
+      "verts": 216,
+      "uv": true,
+      "materials": [
+        "Metal"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_patio_Porcelain_LOD0",
+      "tris": 220,
+      "verts": 360,
+      "uv": true,
+      "materials": [
+        "Porcelain"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_patio_Walnut_LOD0",
+      "tris": 360,
+      "verts": 630,
+      "uv": true,
+      "materials": [
+        "Walnut"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_patio_Leaf_LOD0",
+      "tris": 2400,
+      "verts": 5394,
+      "uv": true,
+      "materials": [
+        "Leaf"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    },
+    {
+      "name": "EN_LittleDonkey_patio_Moss_LOD0",
+      "tris": 1800,
+      "verts": 4068,
+      "uv": true,
+      "materials": [
+        "Moss"
+      ],
+      "skinned": false,
+      "shape_keys": 0
+    }
+  ],
+  "armatures": [],
+  "clips": [],
+  "materials": [
+    "Blue",
+    "Brass",
+    "Bulb",
+    "Coffee",
+    "Concrete",
+    "Cushion",
+    "Glass",
+    "Grout",
+    "Leaf",
+    "Metal",
+    "Moss",
+    "Oak",
+    "OakLight",
+    "Plaster",
+    "Porcelain",
+    "Red",
+    "Screen",
+    "Silver",
+    "Tile",
+    "Walnut"
+  ],
+  "images": [],
+  "bounds_m": {
+    "min": [
+      -4.5181,
+      -5.575,
+      0.0
+    ],
+    "max": [
+      3.35,
+      4.575,
+      3.26
+    ],
+    "size": [
+      7.8681,
+      10.15,
+      3.26
+    ]
+  },
+  "height_m": 3.26,
+  "render": "models/EN_LittleDonkey/review/roundtrip/roundtrip_clay_threequarter.png"
+}

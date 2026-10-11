@@ -1,0 +1,32 @@
+{
+  "asset": "EN_LittleDonkey",
+  "status": "photo-informed-draft",
+  "sourceBlend": "models/EN_LittleDonkey/EN_LittleDonkey_master.blend",
+  "file": "cafe/assets/little-donkey.glb",
+  "blender": "4.5.11 LTS",
+  "authoringAxes": "Z-up, meters",
+  "exportAxes": "Y-up, meters",
+  "triangles": 23092,
+  "sourceObjects": 564,
+  "exportMeshes": 54,
+  "materials": 20,
+  "bytes": 1861616,
+  "sha256": "b9d211ef1584a687a3b841c28268723d36639be86e45ec2951527c4f02e8d7de",
+  "dimensions": "all inferred; not surveyed",
+  "primaryReference": "https://zapx-group.com/zapx/wp-content/uploads/2025/12/Little-Donkey-Cafe.jpg",
+  "historicalZones": [
+    "historic",
+    "patio"
+  ],
+  "unmodeled": [
+    "toilet interior",
+    "back-of-house",
+    "unseen rooms"
+  ],
+  "textureContract": "No image textures. Pure base colors exported as PBR, replaced by shared MeshToonMaterial at runtime. Original source photographs excluded.",
+  "budgets": {
+    "triangles": 80000,
+    "bytes": 4000000,
+    "drawCallsWithOutlines": 120
+  }
+}

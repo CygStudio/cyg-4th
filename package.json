@@ -8,5 +8,8 @@
     "build": "node scripts/build.mjs",
     "check": "node scripts/check.mjs"
   },
-  "dependencies": { "gsap": "3.15.0" }
+  "dependencies": {
+    "gsap": "3.15.0",
+    "three": "0.186.1"
+  }
 }

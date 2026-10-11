@@ -60,6 +60,26 @@ python3 scripts/qa-delivery.py
 
 ## 專案技能
 
-技能存放於 `.agents/skills/`，隨儲存庫保存，未安裝至全局目錄：`frontend-design`、`gsap-core`、`gsap-timeline`、`gsap-scrolltrigger`、`gsap-performance`。
+技能存放於 `.agents/skills/`，隨儲存庫保存，未安裝至全局目錄：`frontend-design`、`gsap-core`、`gsap-timeline`、`gsap-scrolltrigger`、`gsap-performance`、`blender-image-to-3d`、`blender-web-pipeline`、`threejs-shaders`、`threejs-performance`。
 
 技能來源與雜湊見 [來源清單](docs/skill-sources.json)，原始授權及網站 runtime 聲明見 [第三方聲明](THIRD_PARTY_NOTICES.md)。
+
+## 小驢館 3D 空間手帖
+
+開啟 `/cafe/`，使用五個視角、拖曳／雙指縮放、鍵盤方向鍵與縮放按鈕探索空間。Three.js 0.186.1 在瀏覽器套用三階賽璐璐明暗及幾何描邊；模型本身保留可攜的基礎色材質。GLB 不含 Blender 專用 Shader to RGB 節點，其他檢視器不會自動呈現相同賽璐璐效果。
+
+- [研究與來源](docs/research/little-donkey-space.md)：以 ZAPX 主座位區照片為基準，2017–2018 年照片補足歷史區域。
+- [建模假設與規格](models/EN_LittleDonkey/asset-brief.md)、[Blender 原檔](models/EN_LittleDonkey/EN_LittleDonkey_master.blend)、[Web GLB](cafe/assets/little-donkey.glb)。
+- [瀏覽器檢查](cafe/QA.json)、[模型清單](models/EN_LittleDonkey/asset-manifest.json)。
+
+所有尺寸、未拍到的接合與歷史區域現況仍待確認。這是照片參考建模，沒有執行攝影測量或取得現場影片，不是實測數位分身。公開來源照片只在本機研究與 Blender 參考中保留，不隨網站建置發佈。
+
+重新建立模型需要 Blender 4.5 LTS；腳本會重建此資產的 `.blend`、GLB 與概覽圖，編修後請先另存 Blender 原檔：
+
+```sh
+blender --background --python-exit-code 1 --python models/EN_LittleDonkey/build/01_room.py
+python3 scripts/qa-cafe.py http://127.0.0.1:4173
+node scripts/qa-cafe-touch.mjs http://127.0.0.1:4173/cafe/
+```
+
+網頁只在操作或尺寸改變時重繪，均衡模式限制 DPR 為 1.6，省電模式為 1。桌面與手機尺寸以 Chromium 模擬驗證；實體手機效能及現場配置尚未驗收。

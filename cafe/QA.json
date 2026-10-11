@@ -1,0 +1,161 @@
+{
+  "environment": "Chromium desktop and mobile emulation; not physical mobile",
+  "checks": {
+    "views": {
+      "overview": {
+        "calls": 99,
+        "camera": [
+          8.400000000000002,
+          8.9,
+          11.400000000000002
+        ]
+      },
+      "interior": {
+        "calls": 99,
+        "camera": [
+          0.4000000000000001,
+          1.8000000000000005,
+          3.1200000000000014
+        ]
+      },
+      "window": {
+        "calls": 76,
+        "camera": [
+          1.0499999999999998,
+          1.8200000000000005,
+          0.10000000000000032
+        ]
+      },
+      "counter": {
+        "calls": 50,
+        "camera": [
+          0.05000000000000005,
+          1.7999999999999998,
+          0.5499999999999998
+        ]
+      },
+      "plan": {
+        "calls": 99,
+        "camera": [
+          -0.5,
+          17.5,
+          0.00999999999748822
+        ]
+      }
+    },
+    "idleRenderStopped": true,
+    "outlineDrawCalls": {
+      "on": 99,
+      "off": 50
+    },
+    "inferredMeshes": 14,
+    "keyboardOrbitReset": true,
+    "zoomButtons": true,
+    "pointerDrag": true,
+    "lightControl": true,
+    "researchDialogEscape": true,
+    "responsive": {
+      "320": {
+        "dpr": 1,
+        "scroll": 320,
+        "width": 320
+      },
+      "390": {
+        "dpr": 1,
+        "scroll": 390,
+        "width": 390
+      }
+    },
+    "lightQualityDpr": 1,
+    "glbNetworkFailureFallback": true,
+    "retryRecovered": true,
+    "webglContextLossFallback": true,
+    "emulatedTouch": {
+      "orbit": true,
+      "pinchZoom": true,
+      "deviceDpr": 3,
+      "balancedRendererDpr": 1.6,
+      "lightRendererDpr": 1,
+      "physicalDevice": false
+    }
+  },
+  "desktopInitial": {
+    "camera": [
+      8.400000000000002,
+      8.9,
+      11.400000000000002
+    ],
+    "cutaway": true,
+    "daylight": 1,
+    "disposed": false,
+    "evidence": false,
+    "firstFrameMs": 47,
+    "frameCount": 2,
+    "frames": [
+      9.5,
+      0.6000000238418579
+    ],
+    "inferredMeshes": 14,
+    "intersecting": true,
+    "meshes": 54,
+    "modelBytes": 1861616,
+    "outline": true,
+    "quality": "balanced",
+    "ready": true,
+    "renderer": {
+      "calls": 99,
+      "dpr": 1,
+      "geometries": 99,
+      "lines": 8212,
+      "textures": 2,
+      "triangles": 15938
+    },
+    "target": [
+      -0.4,
+      0.8,
+      -0.2
+    ],
+    "view": "overview"
+  },
+  "consoleBeforeFailureTests": {
+    "errors": [],
+    "lifecycle": {
+      "effectiveLaunch": {
+        "browserLaunched": true,
+        "engine": "chrome",
+        "launchHash": 7707568497978554000
+      },
+      "launched": false,
+      "relaunchedBrowser": false,
+      "restartedBackground": false,
+      "restoreStatus": "not_configured",
+      "reused": true,
+      "saveStatus": "not_attempted"
+    }
+  },
+  "status": "PASS",
+  "notRun": [
+    "physical Android/iPhone FPS and touch usability",
+    "site measurements and visual fidelity acceptance",
+    "photogrammetry or video reconstruction"
+  ],
+  "buildSmoke": {
+    "status": "PASS",
+    "httpPaths": [
+      "/cafe/",
+      "/cafe/app.js",
+      "/cafe/style.css",
+      "/cafe/assets/little-donkey.glb",
+      "/cafe/assets/preview.webp",
+      "/cafe/research.md",
+      "/vendor/three/build/three.module.js",
+      "/vendor/three/build/three.core.js",
+      "/vendor/three/examples/jsm/controls/OrbitControls.js",
+      "/vendor/three/examples/jsm/loaders/GLTFLoader.js",
+      "/vendor/three/LICENSE"
+    ],
+    "webglReady": true,
+    "directInteriorView": true,
+    "referencePhotosExcluded": true
+  }
+}

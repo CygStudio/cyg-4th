@@ -73,6 +73,167 @@
         "path": "licenses/gsap-skills-MIT.txt",
         "sha256": "51b04b06556662dd817e8f4aa6d06bc7139dc73739e1319a7233cfde3e147b90"
       }
+    },
+    {
+      "repository": "https://github.com/majidmanzarpour/blender-game-skills",
+      "commit": "f0ef29385a03de139957e6f700b801cdc00b7e29",
+      "skills": [
+        {
+          "name": "blender-image-to-3d",
+          "sourcePath": "skills/blender-image-to-3d",
+          "files": [
+            {
+              "path": ".agents/skills/blender-image-to-3d/SKILL.md",
+              "sha256": "d96993e47584b51cf1887856de043b58316502d8e59003e6e49563dc8c73250c"
+            },
+            {
+              "path": ".agents/skills/blender-image-to-3d/assets/build_template.py",
+              "sha256": "32720898ce7e5054a55eb2f6b96f69208abc0aae853f2bbd4979359dbffb69cf"
+            },
+            {
+              "path": ".agents/skills/blender-image-to-3d/evals/evals.json",
+              "sha256": "dbb8a693858cd7af82250b512a200c52c6fd30a1746062494e1b295640db9aac"
+            },
+            {
+              "path": ".agents/skills/blender-image-to-3d/references/blender-5-notes.md",
+              "sha256": "59605d3bf6d7fe786b84b28f4f85663eb2ee3bd628d8110d74e40e868bc2b065"
+            },
+            {
+              "path": ".agents/skills/blender-image-to-3d/references/categories.md",
+              "sha256": "54365b47b9ae2f58bd7181c1c0f45dc82d0d602f27e964d599b5ca4715b9ea18"
+            },
+            {
+              "path": ".agents/skills/blender-image-to-3d/references/delivery-and-acceptance.md",
+              "sha256": "4cd269a2959fa85c7fe6eb9692cf404f40b9f75a1382c7820bf1de13a048b633"
+            },
+            {
+              "path": ".agents/skills/blender-image-to-3d/references/rigging-animation.md",
+              "sha256": "6c05a72bbba4eb140a8692a45831047c9c7c20e01d26849d8b0782bdac162b08"
+            },
+            {
+              "path": ".agents/skills/blender-image-to-3d/scripts/bake_maps.py",
+              "sha256": "df1e7e656fb237887eb88e55a84e88be96346fef58dd8b629b206479f7ca7110"
+            },
+            {
+              "path": ".agents/skills/blender-image-to-3d/scripts/compose_review.py",
+              "sha256": "baecad27a2b3c4df115effae121254b24951113347ec2e8159154f418a90b379"
+            },
+            {
+              "path": ".agents/skills/blender-image-to-3d/scripts/export_delivery.py",
+              "sha256": "1f317eaa2ebddda6a8d632fa6e7f5f3f12942c7bbd9f1041aaf353186d79083b"
+            },
+            {
+              "path": ".agents/skills/blender-image-to-3d/scripts/init_master.py",
+              "sha256": "cd4ef8f086567babd6403d9a0e61004685ec8d3572fd6c86cd62121c2539e43e"
+            },
+            {
+              "path": ".agents/skills/blender-image-to-3d/scripts/review_render.py",
+              "sha256": "afb1d9633fef198e2bf3059c759893bc6ac5c84db58f7930a4948e6579473301"
+            },
+            {
+              "path": ".agents/skills/blender-image-to-3d/scripts/roundtrip.py",
+              "sha256": "64b3e969e70e3eda6975390ce3a20f40c048641acc0a502b145b0f802f6d34f6"
+            },
+            {
+              "path": ".agents/skills/blender-image-to-3d/scripts/validate.py",
+              "sha256": "f68ce7332eddaca02ae4813a715f3db6e1bf2b3ac5a5721b3cb9ceef70a691c3"
+            },
+            {
+              "path": ".agents/skills/blender-image-to-3d/scripts/world_gate.py",
+              "sha256": "d7c4d50df6f49d59f496d8c84a5aec38586105cb1ee5dc41cfb2d54c3b932693"
+            }
+          ]
+        }
+      ],
+      "license": {
+        "sourcePath": "LICENSE",
+        "path": "licenses/blender-game-skills-MIT.txt",
+        "sha256": "306512561953da83863404efe11ba8845c6a7cf47a8744321c7cbd67f9944304"
+      }
+    },
+    {
+      "repository": "https://github.com/freshtechbro/claudedesignskills",
+      "commit": "1da73febff0c3e1dfefc07f8a5ef8f7d1dfdb6cd",
+      "skills": [
+        {
+          "name": "blender-web-pipeline",
+          "sourcePath": ".claude/skills/blender-web-pipeline",
+          "files": [
+            {
+              "path": ".agents/skills/blender-web-pipeline/SKILL.md",
+              "sha256": "788e4c2fa8d559b5f682a0c49c87159bed06207fd04119ec6f8c3fc7203a7b4c"
+            },
+            {
+              "path": ".agents/skills/blender-web-pipeline/assets/README.md",
+              "sha256": "133f2ae9419057e6656a1992a4730ad02f60ada6d90d56b30d1998695d0c7531"
+            },
+            {
+              "path": ".agents/skills/blender-web-pipeline/references/bpy_api_reference.md",
+              "sha256": "da9c0f1e6e26f747e802741805963c877c26145825dcdb148b85bc35d215915c"
+            },
+            {
+              "path": ".agents/skills/blender-web-pipeline/references/gltf_export_guide.md",
+              "sha256": "ea8d5c8bf051da0b73954c392dc170e86fa503fcfad12ceee99f0c8aa78161d5"
+            },
+            {
+              "path": ".agents/skills/blender-web-pipeline/references/optimization_strategies.md",
+              "sha256": "ed35bef1b3b0b23c29acd0e876f55d96df5eabb475960a6109c9ad0b0eafb1a6"
+            },
+            {
+              "path": ".agents/skills/blender-web-pipeline/scripts/batch_export.py",
+              "sha256": "6e04ce71c9165bbdf7d906ecd2535a79f48ec8000aaae627a5afb61acab71485"
+            },
+            {
+              "path": ".agents/skills/blender-web-pipeline/scripts/generate_lods.py",
+              "sha256": "e58c3dc866eb4f284015e5cdeb4f9c830d464a823b7342eedb519b5f940136e3"
+            },
+            {
+              "path": ".agents/skills/blender-web-pipeline/scripts/optimize_model.py",
+              "sha256": "85fea2b8659bffb1096ca7281ff9f0e23322e59e5de1a895ae203ec667b77aae"
+            }
+          ]
+        }
+      ],
+      "license": {
+        "sourcePath": "LICENSE",
+        "path": "licenses/claudedesignskills-MIT.txt",
+        "sha256": "ce2998ef766b060dfeaf9239781aea4696a2e8c459a8ec6c0088e777bae68dfe"
+      }
+    },
+    {
+      "repository": "https://github.com/cesartevisual/threejs-skills",
+      "commit": "84f9bcb4bea1f7a28d57fe7f0af78f7f9c3dc467",
+      "skills": [
+        {
+          "name": "threejs-shaders",
+          "sourcePath": "skills/threejs-shaders",
+          "files": [
+            {
+              "path": ".agents/skills/threejs-shaders/SKILL.md",
+              "sha256": "96d58846953680f1c3565f67a2ea0e694f06d8d31106377f2451de1e233ad883"
+            }
+          ]
+        },
+        {
+          "name": "threejs-performance",
+          "sourcePath": "skills/threejs-performance",
+          "files": [
+            {
+              "path": ".agents/skills/threejs-performance/SKILL.md",
+              "sha256": "0d2617bacfb947b415ced97430a17a555fdbf41d21e7bcf5777f2a10141c0fbb"
+            },
+            {
+              "path": ".agents/skills/threejs-performance/references/profile.md",
+              "sha256": "dcc20affee2c65803e55d5e2c74c21eadc13475963bef5746e363e40d28ffa2a"
+            }
+          ]
+        }
+      ],
+      "license": {
+        "sourcePath": "LICENSE",
+        "path": "licenses/threejs-skills-MIT.txt",
+        "sha256": "01ec0c5bcde294bfe55837fe35d4a0369f9ed2427c0560b0c9f92763eecd8eb3"
+      }
     }
   ]
 }
