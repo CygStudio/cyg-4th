@@ -1,12 +1,12 @@
 """Exercise the new landing-page → standalone 3D room → landing-page route."""
-import json,subprocess,sys
+import json,subprocess,sys,os
 from pathlib import Path
 root=Path(__file__).resolve().parent.parent
 base=(sys.argv[1] if len(sys.argv)>1 else 'http://127.0.0.1:4173/dist').rstrip('/')
 remote=base.startswith('https://')
 out=root/'artifacts/qa/combined';out.mkdir(parents=True,exist_ok=True)
 def run(*args):
- p=subprocess.run(['agent-browser','--session','cyg-combined-preview','--json',*args],capture_output=True,text=True)
+ p=subprocess.run(['agent-browser','--session',os.environ.get('CYG_QA_SESSION','cyg-combined-preview'),'--json',*args],capture_output=True,text=True)
  assert p.returncode==0,p.stderr+p.stdout
  r=json.loads(p.stdout);assert r.get('success'),r
  return r.get('data',{})
