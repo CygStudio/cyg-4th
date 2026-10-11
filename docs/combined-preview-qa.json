@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "base": "http://127.0.0.1:4173/dist",
+  "styles": {
+    "header": "02 crimson theatre",
+    "body": "03 scrapbook"
+  },
+  "existingVersions": 10,
+  "totalVersions": 11,
+  "modelBytes": 1861616,
+  "modelMeshes": 54,
+  "landingDefers3DResources": true,
+  "desktopInvitationTo3D": true,
+  "mobileNavigationTo3D": true,
+  "returnToActivity": true,
+  "allVersionsAccessible": true,
+  "pageErrors": [],
+  "notRun": [
+    "實體手機效能",
+    "使用者美術驗收"
+  ]
+}

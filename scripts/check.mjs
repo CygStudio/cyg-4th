@@ -10,7 +10,7 @@ for (const {name} of dirs) {
   for (const [,url] of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
     if(url.startsWith('http') || url.startsWith('#')) continue;
     if(url.includes('/vendor/')) continue;
-    await stat(resolve(path,url.split('#')[0]));
+    await stat(resolve(path,url.split(/[?#]/)[0]));
   }
   console.log('PASS '+name+': event facts, local references, design files');
 }

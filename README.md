@@ -1,6 +1,6 @@
-# 熙歌四週年 · 十種熙光
+# 熙歌四週年 · 設計集
 
-熙歌四週年應援咖啡廳的 10 個完整 Landing Page 設計提案。每版都有桌面與手機構圖、GSAP 動畫、活動資訊、交通、周邊拿取資格、FAQ、社群連結，以及獨立的 `DESIGN.md` 與 Git commit。
+熙歌四週年應援咖啡廳的 11 個完整 Landing Page 設計提案。每版都有桌面與手機構圖、GSAP 動畫、活動資訊、交通、周邊拿取資格、FAQ、社群連結，以及獨立的 `DESIGN.md` 與 Git commit。
 
 ## 本機預覽
 
@@ -9,7 +9,7 @@ npm ci --ignore-scripts
 npm run dev
 ```
 
-開啟 [十版設計總覽](http://127.0.0.1:4173/)，點選實際頁面截圖進入各版。使用 Node.js 22 以上；網站採 HTML、CSS、JavaScript，GSAP 3.15.0 固定於專案相依套件，不依賴外部 CDN。
+開啟 [設計總覽](http://127.0.0.1:4173/)，點選實際頁面截圖進入各版。使用 Node.js 22 以上；網站採 HTML、CSS、JavaScript，GSAP 3.15.0 固定於專案相依套件，不依賴外部 CDN。
 
 | 版本 | 設計與動態特色 | 設計說明 |
 | --- | --- | --- |
@@ -23,6 +23,7 @@ npm run dev
 | [08 喫茶浪漫](http://127.0.0.1:4173/versions/08-kissaten/) | 店招、遮雨棚、咖啡窗景與蒸氣 | [DESIGN.md](versions/08-kissaten/DESIGN.md) |
 | [09 紅蝶標本](http://127.0.0.1:4173/versions/09-gothic/) | 哥德肖像框、紅蝶、花窗與古金格紋 | [DESIGN.md](versions/09-gothic/DESIGN.md) |
 | [10 四季放映室](http://127.0.0.1:4173/versions/10-cinema/) | 寬銀幕、膠卷與可手動切換的三幕插畫 | [DESIGN.md](versions/10-cinema/DESIGN.md) |
+| [11 緋幕手帖](http://127.0.0.1:4173/versions/11-theatre-scrapbook/) | 02 導覽與紅幕首屏，搭配 03 手帳內容，串接獨立 3D 展場 | [DESIGN.md](versions/11-theatre-scrapbook/DESIGN.md) |
 
 ## 素材與內容
 
@@ -41,7 +42,7 @@ npm run check
 npm run build
 ```
 
-`dist/` 為可放在靜態伺服器的輸出，包含十版網站、網頁圖片與 GSAP，不包含約 100 MB 的原始素材。使用 HTTP 預覽，勿直接以 `file://` 開啟。
+`dist/` 為可放在靜態伺服器的輸出，包含十一版網站、獨立 3D 展場、網頁圖片與 GSAP／Three.js，不包含約 100 MB 的原始素材。使用 HTTP 預覽，勿直接以 `file://` 開啟。
 
 每版的 `QA.json` 記錄真實 Chromium 的 1440px 桌面、390px 手機模擬、動畫 transform 變化、動態開關、減少動態效果、FAQ、複製 TAG 與圖片載入結果。窄螢幕另檢查 320px。實際截圖位於 `artifacts/qa/`（本機保留、不納入 Git）；`preview.webp` 為納入 Git 的實際桌面首屏截圖。
 
@@ -54,7 +55,7 @@ python3 scripts/qa-carousel.py
 python3 scripts/qa-delivery.py
 ```
 
-建置後十版與 34 個相異本機檔案已透過 HTTP 讀取驗證；總覽縮圖、手機版面，以及第十版的鍵盤操作與資源失敗降級結果見 [交付檢查](docs/delivery-qa.json)。
+建置後十一版與其相異本機檔案已透過 HTTP 讀取驗證；總覽縮圖、手機版面，以及第十版的鍵盤操作與資源失敗降級結果見 [交付檢查](docs/delivery-qa.json)。
 
 技術檢查與使用者美術驗收分開記錄。實體手機效能、外部網站內容與正式活動資料後補尚未驗收。
 
@@ -65,6 +66,8 @@ python3 scripts/qa-delivery.py
 技能來源與雜湊見 [來源清單](docs/skill-sources.json)，原始授權及網站 runtime 聲明見 [第三方聲明](THIRD_PARTY_NOTICES.md)。
 
 ## 小驢館 3D 空間手帖
+
+最新組合版位於 `/versions/11-theatre-scrapbook/`，從導覽列或活動資訊中的空間照片卡可進入獨立展場。
 
 開啟 `/cafe/`，使用五個視角、拖曳／雙指縮放、鍵盤方向鍵與縮放按鈕探索空間。Three.js 0.186.1 在瀏覽器套用三階賽璐璐明暗及幾何描邊；模型本身保留可攜的基礎色材質。GLB 不含 Blender 專用 Shader to RGB 節點，其他檢視器不會自動呈現相同賽璐璐效果。
 

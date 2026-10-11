@@ -1,11 +1,11 @@
 {
   "status": "PASS",
-  "builtPages": 10,
-  "localReferencesFetched": 34,
+  "builtPages": 11,
+  "localReferencesFetched": 38,
   "rawAssetsExcludedFromBuild": true,
   "gallery": {
-    "pages": 10,
-    "desktopImagesLoaded": 10,
+    "pages": 11,
+    "desktopImagesLoaded": 11,
     "mobileWidth": 390,
     "horizontalOverflow": false
   },

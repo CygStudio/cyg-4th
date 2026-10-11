@@ -89,7 +89,7 @@
     "daylight": 1,
     "disposed": false,
     "evidence": false,
-    "firstFrameMs": 47,
+    "firstFrameMs": 48,
     "frameCount": 2,
     "frames": [
       9.5,
@@ -138,24 +138,5 @@
     "physical Android/iPhone FPS and touch usability",
     "site measurements and visual fidelity acceptance",
     "photogrammetry or video reconstruction"
-  ],
-  "buildSmoke": {
-    "status": "PASS",
-    "httpPaths": [
-      "/cafe/",
-      "/cafe/app.js",
-      "/cafe/style.css",
-      "/cafe/assets/little-donkey.glb",
-      "/cafe/assets/preview.webp",
-      "/cafe/research.md",
-      "/vendor/three/build/three.module.js",
-      "/vendor/three/build/three.core.js",
-      "/vendor/three/examples/jsm/controls/OrbitControls.js",
-      "/vendor/three/examples/jsm/loaders/GLTFLoader.js",
-      "/vendor/three/LICENSE"
-    ],
-    "webglReady": true,
-    "directInteriorView": true,
-    "referencePhotosExcluded": true
-  }
+  ]
 }

@@ -14,7 +14,10 @@ def run(*args):
 def ev(js):return run('eval',js).get('result')
 def snap():return ev('window.__cafe.snapshot()')
 def ready():run('wait','--fn','window.__cafe?.ready === true')
-def click(selector):run('click',selector)
+def click(selector):
+ run('click',selector)
+ # Viewer redraw is demand-driven; sample after the requested frame has rendered.
+ ev('new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)))')
 report={'environment':'Chromium desktop and mobile emulation; not physical mobile','checks':{}}
 c=report['checks']
 run('set','viewport','1440','1050');run('set','media','light','reduced-motion');run('open',base+'/cafe/');ready()
