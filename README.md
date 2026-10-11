@@ -2,6 +2,13 @@
 
 熙歌四週年應援咖啡廳的 11 個完整 Landing Page 設計提案。每版都有桌面與手機構圖、GSAP 動畫、活動資訊、交通、周邊拿取資格、FAQ、社群連結，以及獨立的 `DESIGN.md` 與 Git commit。
 
+## 線上預覽
+
+- [11 緋幕手帖：最新組合版本](https://cygstudio.github.io/cyg-4th/versions/11-theatre-scrapbook/)
+- [小驢館獨立 3D 展場](https://cygstudio.github.io/cyg-4th/cafe/)
+- [全部 11 個版本](https://cygstudio.github.io/cyg-4th/)
+- [GitHub 儲存庫](https://github.com/CygStudio/cyg-4th)
+
 ## 本機預覽
 
 ```sh
@@ -86,3 +93,15 @@ node scripts/qa-cafe-touch.mjs http://127.0.0.1:4173/cafe/
 ```
 
 網頁只在操作或尺寸改變時重繪，均衡模式限制 DPR 為 1.6，省電模式為 1。桌面與手機尺寸以 Chromium 模擬驗證；實體手機效能及現場配置尚未驗收。
+
+## GitHub Pages 發佈
+
+推送至 `main` 後，由 [.github/workflows/pages.yml](.github/workflows/pages.yml) 安裝固定相依套件、執行內容檢查與建置，再發佈 `dist/`。也可在 Actions 手動執行。網站資源使用相對路徑，支援 `/cyg-4th/` 專案子路徑。
+
+公開儲存庫保留原始素材、模型與完整版本歷史；Pages 只發佈建置輸出。發佈流程依 [GitHub 官方 Pages workflow 文件](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) 設定，Actions 固定於來源 commit，建置與部署分別授予所需權限。
+
+新版本與獨立展場的往返、3D 延遲載入和手機導覽檢查見 [組合版驗證](docs/combined-preview-qa.json)。本機建置完成且預覽伺服器啟動後可重跑：
+
+```sh
+python3 scripts/qa-combined.py
+```
