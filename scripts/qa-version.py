@@ -51,13 +51,15 @@ run('set','media','light','reduced-motion');run('reload')
 run('wait','--fn','window.__introDone === true')
 reduced=ev("({off:document.body.classList.contains('motion-off'),triggers:ScrollTrigger.getAll().length,headingVisible:getComputedStyle(document.querySelector('h1')).opacity==='1'})")
 assert reduced['off'] and reduced['triggers']==0 and reduced['headingVisible'],reduced
+ev("(async()=>{for(const el of document.querySelectorAll('.section,.closing')){el.scrollIntoView({behavior:'instant'});await new Promise(r=>setTimeout(r,100));}window.scrollTo({top:0,behavior:'instant'});return true})()")
+run('wait','--fn',"[...document.images].every(i=>i.complete&&i.naturalWidth>0)")
 run('screenshot','--full',str(art/'mobile-full.png'))
 errors=run('errors')
 assert not errors.get('errors'),errors
 report={'status':'PASS','desktop':initial,'mobile':mobile,'images':images,'motionSample':motion,'pauseControl':paused,'reducedMotion':reduced,'copyTag':copy,'faqExpanded':faq,'pageErrors':errors.get('errors',[]),'notRun':['實體手機效能','外部網站內容驗收','使用者美術驗收']}
 report_path=root/'versions'/slug/'QA.json'
 previous=json.loads(report_path.read_text()) if report_path.exists() else {}
-for key in ['narrowScreen','carousel']:
+for key in ['narrowScreen','carousel','responsiveLayout']:
  if key in previous:report[key]=previous[key]
 report_path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 run('set','media','light')

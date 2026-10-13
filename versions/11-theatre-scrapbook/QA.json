@@ -3,7 +3,7 @@
   "desktop": {
     "scrollWidth": 1440,
     "title": "熙歌四週年｜緋幕手帖",
-    "triggers": 14,
+    "triggers": 15,
     "width": 1440
   },
   "mobile": {
@@ -28,6 +28,10 @@
     },
     {
       "loaded": true,
+      "src": "../../assets/web/keyvisual.webp"
+    },
+    {
+      "loaded": true,
       "src": "../../assets/web/picnic.webp"
     },
     {
@@ -36,8 +40,8 @@
     }
   ],
   "motionSample": {
-    "after": "matrix(0.716099, 0.697999, -0.697999, 0.716099, -11.0667, 265.6)",
-    "before": "matrix(0.723637, 0.690181, -0.690181, 0.723637, -10.9111, 261.867)"
+    "after": "matrix(0.728119, 0.685451, -0.685451, 0.728119, -10.8178, 259.627)",
+    "before": "matrix(0.735309, 0.677732, -0.677732, 0.735309, -10.6667, 256)"
   },
   "pauseControl": {
     "off": true,
@@ -64,8 +68,220 @@
     "panorama": [
       {
         "fit": "contain",
-        "ratio": 2.813953488372093
+        "ratio": 2.8072289156626504
       }
     ]
+  },
+  "responsiveLayout": {
+    "status": "PASS",
+    "viewports": [
+      {
+        "escapedText": [],
+        "illustrations": [
+          {
+            "naturalRatio": 1.2727272727272727,
+            "renderedRatio": 1.271604938271605,
+            "source": "../../cafe/assets/preview.webp"
+          },
+          {
+            "naturalRatio": 1.4255167498218104,
+            "renderedRatio": 1.417910447761194,
+            "source": "../../assets/web/keyvisual.webp"
+          },
+          {
+            "naturalRatio": 2.816901408450704,
+            "renderedRatio": 2.8072289156626504,
+            "source": "../../assets/web/picnic.webp"
+          },
+          {
+            "naturalRatio": 1,
+            "renderedRatio": 1,
+            "source": "../../assets/web/chibi-autumn.webp"
+          }
+        ],
+        "overlap": [],
+        "scrollWidth": 320,
+        "width": 320
+      },
+      {
+        "escapedText": [],
+        "illustrations": [
+          {
+            "naturalRatio": 1.2727272727272727,
+            "renderedRatio": 1.2701421800947867,
+            "source": "../../cafe/assets/preview.webp"
+          },
+          {
+            "naturalRatio": 1.4255167498218104,
+            "renderedRatio": 1.4219653179190752,
+            "source": "../../assets/web/keyvisual.webp"
+          },
+          {
+            "naturalRatio": 2.816901408450704,
+            "renderedRatio": 2.803738317757009,
+            "source": "../../assets/web/picnic.webp"
+          },
+          {
+            "naturalRatio": 1,
+            "renderedRatio": 1,
+            "source": "../../assets/web/chibi-autumn.webp"
+          }
+        ],
+        "overlap": [],
+        "scrollWidth": 390,
+        "width": 390
+      },
+      {
+        "escapedText": [],
+        "illustrations": [
+          {
+            "naturalRatio": 1.2727272727272727,
+            "renderedRatio": 1.271137026239067,
+            "source": "../../cafe/assets/preview.webp"
+          },
+          {
+            "naturalRatio": 1.4255167498218104,
+            "renderedRatio": 1.422680412371134,
+            "source": "../../assets/web/keyvisual.webp"
+          },
+          {
+            "naturalRatio": 2.816901408450704,
+            "renderedRatio": 2.8202247191011236,
+            "source": "../../assets/web/picnic.webp"
+          },
+          {
+            "naturalRatio": 1,
+            "renderedRatio": 1,
+            "source": "../../assets/web/chibi-autumn.webp"
+          }
+        ],
+        "overlap": [],
+        "scrollWidth": 600,
+        "width": 600
+      },
+      {
+        "escapedText": [],
+        "illustrations": [
+          {
+            "naturalRatio": 1.2727272727272727,
+            "renderedRatio": 1.2705314009661837,
+            "source": "../../cafe/assets/preview.webp"
+          },
+          {
+            "naturalRatio": 1.4255167498218104,
+            "renderedRatio": 1.427536231884058,
+            "source": "../../assets/web/keyvisual.webp"
+          },
+          {
+            "naturalRatio": 2.816901408450704,
+            "renderedRatio": 2.82010582010582,
+            "source": "../../assets/web/picnic.webp"
+          },
+          {
+            "naturalRatio": 1,
+            "renderedRatio": 1,
+            "source": "../../assets/web/chibi-autumn.webp"
+          }
+        ],
+        "overlap": [],
+        "scrollWidth": 768,
+        "width": 768
+      },
+      {
+        "escapedText": [],
+        "illustrations": [
+          {
+            "naturalRatio": 1.2727272727272727,
+            "renderedRatio": 1.2747747747747749,
+            "source": "../../cafe/assets/preview.webp"
+          },
+          {
+            "naturalRatio": 1.4255167498218104,
+            "renderedRatio": 1.427536231884058,
+            "source": "../../assets/web/keyvisual.webp"
+          },
+          {
+            "naturalRatio": 2.816901408450704,
+            "renderedRatio": 2.82010582010582,
+            "source": "../../assets/web/picnic.webp"
+          },
+          {
+            "naturalRatio": 1,
+            "renderedRatio": 1,
+            "source": "../../assets/web/chibi-autumn.webp"
+          }
+        ],
+        "overlap": [],
+        "scrollWidth": 820,
+        "width": 820
+      },
+      {
+        "escapedText": [],
+        "illustrations": [
+          {
+            "naturalRatio": 1.2727272727272727,
+            "renderedRatio": 1.2720848056537102,
+            "source": "../../cafe/assets/preview.webp"
+          },
+          {
+            "naturalRatio": 1.4255167498218104,
+            "renderedRatio": 1.423809523809524,
+            "source": "../../assets/web/keyvisual.webp"
+          },
+          {
+            "naturalRatio": 2.816901408450704,
+            "renderedRatio": 2.8194444444444446,
+            "source": "../../assets/web/picnic.webp"
+          },
+          {
+            "naturalRatio": 1,
+            "renderedRatio": 1,
+            "source": "../../assets/web/chibi-autumn.webp"
+          }
+        ],
+        "overlap": [],
+        "scrollWidth": 1024,
+        "width": 1024
+      },
+      {
+        "escapedText": [],
+        "illustrations": [
+          {
+            "naturalRatio": 1.2727272727272727,
+            "renderedRatio": 1.2747524752475248,
+            "source": "../../cafe/assets/preview.webp"
+          },
+          {
+            "naturalRatio": 1.4255167498218104,
+            "renderedRatio": 1.4233333333333331,
+            "source": "../../assets/web/keyvisual.webp"
+          },
+          {
+            "naturalRatio": 2.816901408450704,
+            "renderedRatio": 2.819512195121951,
+            "source": "../../assets/web/picnic.webp"
+          },
+          {
+            "naturalRatio": 1,
+            "renderedRatio": 1,
+            "source": "../../assets/web/chibi-autumn.webp"
+          }
+        ],
+        "overlap": [],
+        "scrollWidth": 1440,
+        "width": 1440
+      }
+    ],
+    "keyboardFAQ": true,
+    "pageErrors": [],
+    "screenshots": "artifacts/qa/11-theatre-scrapbook/layout-{width}.png"
+  },
+  "automatedAccessibility": {
+    "engine": "axe-core 4.12.1",
+    "violations": 0,
+    "incompleteRules": [
+      "color-contrast"
+    ],
+    "note": "漸層與裝飾重疊的文字對比仍需人工判讀，不代表完整 WCAG 驗收。"
   }
 }

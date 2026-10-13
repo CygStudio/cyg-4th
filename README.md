@@ -30,7 +30,7 @@ npm run dev
 | [08 喫茶浪漫](http://127.0.0.1:4173/versions/08-kissaten/) | 店招、遮雨棚、咖啡窗景與蒸氣 | [DESIGN.md](versions/08-kissaten/DESIGN.md) |
 | [09 紅蝶標本](http://127.0.0.1:4173/versions/09-gothic/) | 哥德肖像框、紅蝶、花窗與古金格紋 | [DESIGN.md](versions/09-gothic/DESIGN.md) |
 | [10 四季放映室](http://127.0.0.1:4173/versions/10-cinema/) | 寬銀幕、膠卷與可手動切換的三幕插畫 | [DESIGN.md](versions/10-cinema/DESIGN.md) |
-| [11 緋幕手帖](http://127.0.0.1:4173/versions/11-theatre-scrapbook/) | 02 導覽與紅幕首屏，搭配 03 手帳內容，串接獨立 3D 展場 | [DESIGN.md](versions/11-theatre-scrapbook/DESIGN.md) |
+| [11 緋幕手帖](http://127.0.0.1:4173/versions/11-theatre-scrapbook/) | 紅黑劇場貫穿全頁，中段照片與信紙拼貼，02 深色謝幕，串接獨立 3D 展場 | [DESIGN.md](versions/11-theatre-scrapbook/DESIGN.md) |
 
 ## 素材與內容
 
@@ -59,6 +59,7 @@ npm run build
 python3 scripts/qa-version.py 01-autumn-letter
 python3 scripts/qa-narrow.py 01-autumn-letter
 python3 scripts/qa-carousel.py
+python3 scripts/qa-theatre-layout.py
 python3 scripts/qa-delivery.py
 ```
 

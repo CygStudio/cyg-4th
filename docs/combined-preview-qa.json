@@ -3,7 +3,8 @@
   "base": "http://127.0.0.1:4173/dist",
   "styles": {
     "header": "02 crimson theatre",
-    "body": "03 scrapbook"
+    "body": "theatre palette with paper collage",
+    "footer": "02 dark theatre"
   },
   "existingVersions": 10,
   "totalVersions": 11,
