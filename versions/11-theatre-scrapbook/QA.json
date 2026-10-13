@@ -20,28 +20,28 @@
   "images": [
     {
       "loaded": true,
-      "src": "../../assets/web/portrait.webp"
+      "src": "assets/web/portrait.webp"
     },
     {
       "loaded": true,
-      "src": "../../cafe/assets/preview.webp"
+      "src": "cafe/assets/preview.webp"
     },
     {
       "loaded": true,
-      "src": "../../assets/web/keyvisual.webp"
+      "src": "assets/web/keyvisual.webp"
     },
     {
       "loaded": true,
-      "src": "../../assets/web/picnic.webp"
+      "src": "assets/web/picnic.webp"
     },
     {
       "loaded": true,
-      "src": "../../assets/web/chibi-autumn.webp"
+      "src": "assets/web/chibi-autumn.webp"
     }
   ],
   "motionSample": {
-    "after": "matrix(0.728119, 0.685451, -0.685451, 0.728119, -10.8178, 259.627)",
-    "before": "matrix(0.735309, 0.677732, -0.677732, 0.735309, -10.6667, 256)"
+    "after": "matrix(0.714364, 0.699774, -0.699774, 0.714364, -11.1022, 268.674)",
+    "before": "matrix(0.721492, 0.692423, -0.692423, 0.721492, -10.9556, 265.124)"
   },
   "pauseControl": {
     "off": true,
@@ -276,12 +276,209 @@
     "pageErrors": [],
     "screenshots": "artifacts/qa/11-theatre-scrapbook/layout-{width}.png"
   },
-  "automatedAccessibility": {
-    "engine": "axe-core 4.12.1",
-    "violations": 0,
-    "incompleteRules": [
-      "color-contrast"
+  "viewportHeader": {
+    "status": "PASS",
+    "scenarios": [
+      {
+        "expanded": {
+          "contentContained": true,
+          "faceClear": true,
+          "headerHeight": 91.796875,
+          "height": 900,
+          "heroBottom": 900,
+          "heroHeight": 808.203125,
+          "minHeight": 640,
+          "scrollWidth": 1440,
+          "width": 1440
+        },
+        "compact": {
+          "height": 57,
+          "heroDocumentBottom": 900,
+          "links": 5,
+          "position": "fixed",
+          "top": 0
+        },
+        "anchorClear": true,
+        "restoredAtTop": true
+      },
+      {
+        "expanded": {
+          "contentContained": true,
+          "faceClear": true,
+          "headerHeight": 91.796875,
+          "height": 1200,
+          "heroBottom": 1200,
+          "heroHeight": 1108.203125,
+          "minHeight": 640,
+          "scrollWidth": 1440,
+          "width": 1440
+        },
+        "compact": {
+          "height": 57,
+          "heroDocumentBottom": 1200,
+          "links": 5,
+          "position": "fixed",
+          "top": 0
+        },
+        "anchorClear": true,
+        "restoredAtTop": true
+      },
+      {
+        "expanded": {
+          "contentContained": true,
+          "faceClear": true,
+          "headerHeight": 91.796875,
+          "height": 768,
+          "heroBottom": 768,
+          "heroHeight": 676.203125,
+          "minHeight": 640,
+          "scrollWidth": 1366,
+          "width": 1366
+        },
+        "compact": {
+          "height": 57,
+          "heroDocumentBottom": 768,
+          "links": 5,
+          "position": "fixed",
+          "top": 0
+        },
+        "anchorClear": true,
+        "restoredAtTop": true
+      },
+      {
+        "expanded": {
+          "contentContained": true,
+          "faceClear": true,
+          "headerHeight": 91.796875,
+          "height": 600,
+          "heroBottom": 731.796875,
+          "heroHeight": 640,
+          "minHeight": 640,
+          "scrollWidth": 1024,
+          "width": 1024
+        },
+        "compact": {
+          "height": 57,
+          "heroDocumentBottom": 731.796875,
+          "links": 5,
+          "position": "fixed",
+          "top": 0
+        },
+        "anchorClear": true,
+        "restoredAtTop": true
+      },
+      {
+        "expanded": {
+          "contentContained": true,
+          "faceClear": true,
+          "headerHeight": 91.796875,
+          "height": 390,
+          "heroBottom": 731.796875,
+          "heroHeight": 640,
+          "minHeight": 640,
+          "scrollWidth": 844,
+          "width": 844
+        },
+        "compact": {
+          "height": 57,
+          "heroDocumentBottom": 731.796875,
+          "links": 5,
+          "position": "fixed",
+          "top": 0
+        },
+        "anchorClear": true,
+        "restoredAtTop": true
+      },
+      {
+        "expanded": {
+          "contentContained": true,
+          "faceClear": true,
+          "headerHeight": 91.796875,
+          "height": 1024,
+          "heroBottom": 1024,
+          "heroHeight": 932.203125,
+          "minHeight": 640,
+          "scrollWidth": 768,
+          "width": 768
+        },
+        "compact": {
+          "height": 57,
+          "heroDocumentBottom": 1024,
+          "links": 5,
+          "position": "fixed",
+          "top": 0
+        },
+        "anchorClear": true,
+        "restoredAtTop": true
+      },
+      {
+        "expanded": {
+          "contentContained": true,
+          "faceClear": true,
+          "headerHeight": 70.796875,
+          "height": 900,
+          "heroBottom": 900,
+          "heroHeight": 829.203125,
+          "minHeight": 720,
+          "scrollWidth": 700,
+          "width": 700
+        },
+        "compact": {
+          "height": 57,
+          "heroDocumentBottom": 900,
+          "links": 5,
+          "position": "fixed",
+          "top": 0
+        },
+        "anchorClear": true,
+        "restoredAtTop": true
+      },
+      {
+        "expanded": {
+          "contentContained": true,
+          "faceClear": true,
+          "headerHeight": 104.59375,
+          "height": 844,
+          "heroBottom": 844,
+          "heroHeight": 739.40625,
+          "minHeight": 720,
+          "scrollWidth": 390,
+          "width": 390
+        },
+        "compact": {
+          "height": 75.1875,
+          "heroDocumentBottom": 844,
+          "links": 5,
+          "position": "fixed",
+          "top": 0
+        },
+        "anchorClear": true,
+        "restoredAtTop": true
+      },
+      {
+        "expanded": {
+          "contentContained": true,
+          "faceClear": true,
+          "headerHeight": 104.59375,
+          "height": 568,
+          "heroBottom": 824.59375,
+          "heroHeight": 720,
+          "minHeight": 720,
+          "scrollWidth": 320,
+          "width": 320
+        },
+        "compact": {
+          "height": 75.1875,
+          "heroDocumentBottom": 824.59375,
+          "links": 5,
+          "position": "fixed",
+          "top": 0
+        },
+        "anchorClear": true,
+        "restoredAtTop": true
+      }
     ],
-    "note": "漸層與裝飾重疊的文字對比仍需人工判讀，不代表完整 WCAG 驗收。"
+    "resizeWhileFixed": true,
+    "pageErrors": []
   }
 }
