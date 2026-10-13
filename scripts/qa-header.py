@@ -1,10 +1,11 @@
 """Verify viewport-sized stage, minimum height and compact navigation in Chromium."""
-import json, subprocess
+import json, subprocess, sys, os
 from pathlib import Path
 root=Path(__file__).resolve().parent.parent
+base=(sys.argv[1] if len(sys.argv)>1 else 'http://127.0.0.1:4173').rstrip('/')
 out=root/'artifacts/qa/11-theatre-scrapbook';out.mkdir(parents=True,exist_ok=True)
 def run(*args):
- p=subprocess.run(['agent-browser','--session','cyg-header-viewport','--json',*args],capture_output=True,text=True)
+ p=subprocess.run(['agent-browser','--session',os.environ.get('CYG_QA_SESSION','cyg-header-viewport'),'--json',*args],capture_output=True,text=True)
  assert p.returncode==0,p.stderr+p.stdout
  r=json.loads(p.stdout);assert r.get('success'),r
  return r.get('data',{})
@@ -12,20 +13,21 @@ def ev(js):return run('eval',js).get('result')
 run('set','media','light','reduced-motion')
 results=[]
 for width,height in [(1440,900),(1440,1200),(1366,768),(1024,600),(844,390),(768,1024),(700,900),(390,844),(320,568)]:
- run('set','viewport',str(width),str(height));run('open','http://127.0.0.1:4173/')
+ run('set','viewport',str(width),str(height));run('open',base+'/')
  run('wait','--fn','window.__introDone===true&&document.querySelector(".stage-character img").complete')
  ev('new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)))')
  expanded=ev("""(() => {
  const header=document.querySelector('.site-header').getBoundingClientRect(), hero=document.querySelector('.hero').getBoundingClientRect();
+ const marquee=document.querySelector('.marquee').getBoundingClientRect();
  const image=document.querySelector('.stage-character img'), rect=image.getBoundingClientRect();
  const paintedHeight=Math.min(rect.height,rect.width*image.naturalHeight/image.naturalWidth);
  const faceBottom=rect.top+(rect.height-paintedHeight)/2+paintedHeight*.3;
- return {width:innerWidth,height:innerHeight,headerHeight:header.height,heroHeight:hero.height,heroBottom:hero.bottom,
+ return {width:innerWidth,height:innerHeight,headerHeight:header.height,heroHeight:hero.height,heroBottom:hero.bottom,marqueeHeight:marquee.height,firstScreenBottom:marquee.bottom,
   minHeight:parseFloat(getComputedStyle(document.querySelector('.hero')).minHeight),scrollWidth:document.documentElement.scrollWidth,
   faceClear:document.querySelector('.hero h1').getBoundingClientRect().top>faceBottom,
   contentContained:[...document.querySelectorAll('.hero-copy h1,.hero-copy .button')].every(e=>{const r=e.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth&&r.top>=hero.top&&r.bottom<=hero.bottom;})};
  })()""")
- assert abs(expanded['heroBottom']-max(height,expanded['headerHeight']+expanded['minHeight']))<1,expanded
+ assert abs(expanded['firstScreenBottom']-max(height,expanded['headerHeight']+expanded['minHeight']+expanded['marqueeHeight']))<1,expanded
  assert expanded['scrollWidth']==width and expanded['faceClear'] and expanded['contentContained'],expanded
  run('screenshot',str(out/f'header-{width}x{height}.png'))
  ev('window.scrollTo({top:240,behavior:"instant"})')
@@ -46,8 +48,8 @@ for width,height in [(1440,900),(1440,1200),(1366,768),(1024,600),(844,390),(768
 ev('window.scrollTo({top:240,behavior:"instant"})')
 run('wait','--fn','document.querySelector(".site-header").classList.contains("is-compact")')
 run('set','viewport','1440','900')
-run('wait','--fn','Math.abs(document.querySelector(".hero").getBoundingClientRect().height+document.querySelector(".header-slot").getBoundingClientRect().height-innerHeight)<1')
+run('wait','--fn','Math.abs(document.querySelector(".hero").getBoundingClientRect().height+document.querySelector(".header-slot").getBoundingClientRect().height+document.querySelector(".marquee").getBoundingClientRect().height-innerHeight)<1')
 assert ev('document.querySelector(".site-header").getBoundingClientRect().top')==0
 errors=run('errors').get('errors',[]);assert not errors,errors
-p=root/'versions/11-theatre-scrapbook/QA.json';report=json.loads(p.read_text());report['viewportHeader']={'status':'PASS','scenarios':results,'resizeWhileFixed':True,'pageErrors':errors};p.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+p=(out/'remote-header-qa.json') if base.startswith('https:') else root/'versions/11-theatre-scrapbook/QA.json';report=json.loads(p.read_text()) if p.exists() else {};report['viewportHeader']={'status':'PASS','scenarios':results,'resizeWhileFixed':True,'pageErrors':errors};p.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 run('close')

@@ -106,4 +106,5 @@ node scripts/qa-cafe-touch.mjs http://127.0.0.1:4173/cafe/
 ```sh
 python3 scripts/qa-combined.py
 python3 scripts/qa-header.py
+python3 scripts/qa-nav-motion.py
 ```

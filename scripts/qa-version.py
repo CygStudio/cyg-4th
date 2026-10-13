@@ -59,7 +59,7 @@ assert not errors.get('errors'),errors
 report={'status':'PASS','desktop':initial,'mobile':mobile,'images':images,'motionSample':motion,'pauseControl':paused,'reducedMotion':reduced,'copyTag':copy,'faqExpanded':faq,'pageErrors':errors.get('errors',[]),'notRun':['實體手機效能','外部網站內容驗收','使用者美術驗收']}
 report_path=root/'versions'/slug/'QA.json'
 previous=json.loads(report_path.read_text()) if report_path.exists() else {}
-for key in ['narrowScreen','carousel','responsiveLayout','viewportHeader']:
+for key in ['narrowScreen','carousel','responsiveLayout','viewportHeader','navTransition']:
  if key in previous:report[key]=previous[key]
 report_path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 run('set','media','light')

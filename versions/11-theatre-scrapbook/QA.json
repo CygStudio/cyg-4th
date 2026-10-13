@@ -40,8 +40,8 @@
     }
   ],
   "motionSample": {
-    "after": "matrix(0.714364, 0.699774, -0.699774, 0.714364, -11.1022, 268.674)",
-    "before": "matrix(0.721492, 0.692423, -0.692423, 0.721492, -10.9556, 265.124)"
+    "after": "matrix(0.717181, 0.696887, -0.696887, 0.717181, -11.0444, 252.089)",
+    "before": "matrix(0.724493, 0.689282, -0.689282, 0.724493, -10.8933, 248.64)"
   },
   "pauseControl": {
     "off": true,
@@ -283,17 +283,19 @@
         "expanded": {
           "contentContained": true,
           "faceClear": true,
+          "firstScreenBottom": 900,
           "headerHeight": 91.796875,
           "height": 900,
-          "heroBottom": 900,
-          "heroHeight": 808.203125,
+          "heroBottom": 844.40625,
+          "heroHeight": 752.609375,
+          "marqueeHeight": 55.59375,
           "minHeight": 640,
           "scrollWidth": 1440,
           "width": 1440
         },
         "compact": {
           "height": 57,
-          "heroDocumentBottom": 900,
+          "heroDocumentBottom": 844.40625,
           "links": 5,
           "position": "fixed",
           "top": 0
@@ -305,17 +307,19 @@
         "expanded": {
           "contentContained": true,
           "faceClear": true,
+          "firstScreenBottom": 1200,
           "headerHeight": 91.796875,
           "height": 1200,
-          "heroBottom": 1200,
-          "heroHeight": 1108.203125,
+          "heroBottom": 1144.40625,
+          "heroHeight": 1052.609375,
+          "marqueeHeight": 55.59375,
           "minHeight": 640,
           "scrollWidth": 1440,
           "width": 1440
         },
         "compact": {
           "height": 57,
-          "heroDocumentBottom": 1200,
+          "heroDocumentBottom": 1144.40625,
           "links": 5,
           "position": "fixed",
           "top": 0
@@ -327,17 +331,19 @@
         "expanded": {
           "contentContained": true,
           "faceClear": true,
+          "firstScreenBottom": 787.390625,
           "headerHeight": 91.796875,
           "height": 768,
-          "heroBottom": 768,
-          "heroHeight": 676.203125,
+          "heroBottom": 731.796875,
+          "heroHeight": 640,
+          "marqueeHeight": 55.59375,
           "minHeight": 640,
           "scrollWidth": 1366,
           "width": 1366
         },
         "compact": {
           "height": 57,
-          "heroDocumentBottom": 768,
+          "heroDocumentBottom": 731.796875,
           "links": 5,
           "position": "fixed",
           "top": 0
@@ -349,10 +355,12 @@
         "expanded": {
           "contentContained": true,
           "faceClear": true,
+          "firstScreenBottom": 787.390625,
           "headerHeight": 91.796875,
           "height": 600,
           "heroBottom": 731.796875,
           "heroHeight": 640,
+          "marqueeHeight": 55.59375,
           "minHeight": 640,
           "scrollWidth": 1024,
           "width": 1024
@@ -371,10 +379,12 @@
         "expanded": {
           "contentContained": true,
           "faceClear": true,
+          "firstScreenBottom": 787.390625,
           "headerHeight": 91.796875,
           "height": 390,
           "heroBottom": 731.796875,
           "heroHeight": 640,
+          "marqueeHeight": 55.59375,
           "minHeight": 640,
           "scrollWidth": 844,
           "width": 844
@@ -393,17 +403,19 @@
         "expanded": {
           "contentContained": true,
           "faceClear": true,
+          "firstScreenBottom": 1024,
           "headerHeight": 91.796875,
           "height": 1024,
-          "heroBottom": 1024,
-          "heroHeight": 932.203125,
+          "heroBottom": 968.40625,
+          "heroHeight": 876.609375,
+          "marqueeHeight": 55.59375,
           "minHeight": 640,
           "scrollWidth": 768,
           "width": 768
         },
         "compact": {
           "height": 57,
-          "heroDocumentBottom": 1024,
+          "heroDocumentBottom": 968.40625,
           "links": 5,
           "position": "fixed",
           "top": 0
@@ -415,17 +427,19 @@
         "expanded": {
           "contentContained": true,
           "faceClear": true,
+          "firstScreenBottom": 900,
           "headerHeight": 70.796875,
           "height": 900,
-          "heroBottom": 900,
-          "heroHeight": 829.203125,
-          "minHeight": 720,
+          "heroBottom": 844.40625,
+          "heroHeight": 773.609375,
+          "marqueeHeight": 55.59375,
+          "minHeight": 680,
           "scrollWidth": 700,
           "width": 700
         },
         "compact": {
           "height": 57,
-          "heroDocumentBottom": 900,
+          "heroDocumentBottom": 844.40625,
           "links": 5,
           "position": "fixed",
           "top": 0
@@ -437,17 +451,19 @@
         "expanded": {
           "contentContained": true,
           "faceClear": true,
+          "firstScreenBottom": 844,
           "headerHeight": 104.59375,
           "height": 844,
-          "heroBottom": 844,
-          "heroHeight": 739.40625,
-          "minHeight": 720,
+          "heroBottom": 788.40625,
+          "heroHeight": 683.8125,
+          "marqueeHeight": 55.59375,
+          "minHeight": 680,
           "scrollWidth": 390,
           "width": 390
         },
         "compact": {
           "height": 75.1875,
-          "heroDocumentBottom": 844,
+          "heroDocumentBottom": 788.40625,
           "links": 5,
           "position": "fixed",
           "top": 0
@@ -459,17 +475,19 @@
         "expanded": {
           "contentContained": true,
           "faceClear": true,
+          "firstScreenBottom": 840.1875,
           "headerHeight": 104.59375,
           "height": 568,
-          "heroBottom": 824.59375,
-          "heroHeight": 720,
-          "minHeight": 720,
+          "heroBottom": 784.59375,
+          "heroHeight": 680,
+          "marqueeHeight": 55.59375,
+          "minHeight": 680,
           "scrollWidth": 320,
           "width": 320
         },
         "compact": {
           "height": 75.1875,
-          "heroDocumentBottom": 824.59375,
+          "heroDocumentBottom": 784.59375,
           "links": 5,
           "position": "fixed",
           "top": 0
@@ -480,5 +498,211 @@
     ],
     "resizeWhileFixed": true,
     "pageErrors": []
+  },
+  "navTransition": {
+    "status": "PASS",
+    "base": "http://127.0.0.1:4173",
+    "scenarios": [
+      {
+        "viewport": [
+          1440,
+          900
+        ],
+        "direction": "shrink",
+        "frames": 56,
+        "firstHeight": 90.796875,
+        "lastHeight": 56,
+        "distinctHeights": 22,
+        "largestFrameStep": 4.2,
+        "noOverlapOrLayoutShift": true
+      },
+      {
+        "viewport": [
+          1440,
+          900
+        ],
+        "direction": "expand",
+        "frames": 56,
+        "firstHeight": 56,
+        "lastHeight": 90.796875,
+        "distinctHeights": 22,
+        "largestFrameStep": 4.2,
+        "noOverlapOrLayoutShift": true
+      },
+      {
+        "viewport": [
+          1440,
+          900
+        ],
+        "direction": "reverse",
+        "frames": 56,
+        "firstHeight": 90.796875,
+        "lastHeight": 90.796875,
+        "distinctHeights": 21,
+        "largestFrameStep": 1.53,
+        "noOverlapOrLayoutShift": true
+      },
+      {
+        "viewport": [
+          700,
+          900
+        ],
+        "direction": "shrink",
+        "frames": 56,
+        "firstHeight": 69.796875,
+        "lastHeight": 56,
+        "distinctHeights": 20,
+        "largestFrameStep": 1.77,
+        "noOverlapOrLayoutShift": true
+      },
+      {
+        "viewport": [
+          700,
+          900
+        ],
+        "direction": "expand",
+        "frames": 56,
+        "firstHeight": 56,
+        "lastHeight": 69.796875,
+        "distinctHeights": 20,
+        "largestFrameStep": 1.67,
+        "noOverlapOrLayoutShift": true
+      },
+      {
+        "viewport": [
+          700,
+          900
+        ],
+        "direction": "reverse",
+        "frames": 56,
+        "firstHeight": 69.796875,
+        "lastHeight": 69.796875,
+        "distinctHeights": 16,
+        "largestFrameStep": 0.81,
+        "noOverlapOrLayoutShift": true
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "direction": "shrink",
+        "frames": 56,
+        "firstHeight": 103.59375,
+        "lastHeight": 74.1875,
+        "distinctHeights": 21,
+        "largestFrameStep": 3.77,
+        "noOverlapOrLayoutShift": true
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "direction": "expand",
+        "frames": 56,
+        "firstHeight": 74.1875,
+        "lastHeight": 103.59375,
+        "distinctHeights": 22,
+        "largestFrameStep": 3.76,
+        "noOverlapOrLayoutShift": true
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "direction": "reverse",
+        "frames": 56,
+        "firstHeight": 103.59375,
+        "lastHeight": 103.59375,
+        "distinctHeights": 22,
+        "largestFrameStep": 1.61,
+        "noOverlapOrLayoutShift": true
+      },
+      {
+        "viewport": [
+          320,
+          568
+        ],
+        "direction": "shrink",
+        "frames": 57,
+        "firstHeight": 103.59375,
+        "lastHeight": 74.1875,
+        "distinctHeights": 21,
+        "largestFrameStep": 3.76,
+        "noOverlapOrLayoutShift": true
+      },
+      {
+        "viewport": [
+          320,
+          568
+        ],
+        "direction": "expand",
+        "frames": 56,
+        "firstHeight": 74.1875,
+        "lastHeight": 103.59375,
+        "distinctHeights": 22,
+        "largestFrameStep": 3.76,
+        "noOverlapOrLayoutShift": true
+      },
+      {
+        "viewport": [
+          320,
+          568
+        ],
+        "direction": "reverse",
+        "frames": 56,
+        "firstHeight": 103.59375,
+        "lastHeight": 103.59375,
+        "distinctHeights": 21,
+        "largestFrameStep": 1.26,
+        "noOverlapOrLayoutShift": true
+      },
+      {
+        "viewport": [
+          844,
+          390
+        ],
+        "direction": "shrink",
+        "frames": 56,
+        "firstHeight": 90.796875,
+        "lastHeight": 56,
+        "distinctHeights": 22,
+        "largestFrameStep": 4.2,
+        "noOverlapOrLayoutShift": true
+      },
+      {
+        "viewport": [
+          844,
+          390
+        ],
+        "direction": "expand",
+        "frames": 56,
+        "firstHeight": 56,
+        "lastHeight": 90.796875,
+        "distinctHeights": 22,
+        "largestFrameStep": 4.46,
+        "noOverlapOrLayoutShift": true
+      },
+      {
+        "viewport": [
+          844,
+          390
+        ],
+        "direction": "reverse",
+        "frames": 56,
+        "firstHeight": 90.796875,
+        "lastHeight": 90.796875,
+        "distinctHeights": 23,
+        "largestFrameStep": 2.01,
+        "noOverlapOrLayoutShift": true
+      }
+    ],
+    "manualMotionOff": true,
+    "pageErrors": [],
+    "notRun": [
+      "實體手機效能"
+    ]
   }
 }
