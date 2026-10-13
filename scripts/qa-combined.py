@@ -11,8 +11,10 @@ def run(*args):
  r=json.loads(p.stdout);assert r.get('success'),r
  return r.get('data',{})
 def ev(js):return run('eval',js).get('result')
-run('set','viewport','1440','1000');run('open',base+'/versions/11-theatre-scrapbook/')
+run('set','viewport','1440','1000');run('open',base+'/')
 run('wait','--fn','window.__introDone===true')
+assert ev('location.href')==base+'/'
+assert ev('document.body.dataset.version')=='11'
 assert not ev("performance.getEntriesByType('resource').some(r=>r.name.endsWith('.glb')||r.name.includes('/three/'))")
 assert ev("getComputedStyle(document.body).backgroundColor==='rgb(19, 11, 19)'&&getComputedStyle(document.querySelector('.event')).color==='rgb(66, 40, 34)'&&getComputedStyle(document.querySelector('.closing')).backgroundColor==='rgb(19, 11, 19)'&&getComputedStyle(document.querySelector('.site-header')).backgroundColor==='rgb(13, 9, 14)'")
 run('find','role','link','click','--name','進入 3D 展場','--exact')
@@ -23,15 +25,27 @@ run('click','[data-view="interior"]');ev('new Promise(r=>requestAnimationFrame((
 assert ev('window.__cafe.snapshot().view')=='interior'
 run('screenshot',str(out/('remote-cafe.png' if remote else 'cafe.png')))
 run('find','role','link','click','--name','← 返回活動頁','--exact');run('wait','--fn','window.__introDone===true')
-assert ev("location.pathname.endsWith('/versions/11-theatre-scrapbook/')")
+assert ev('location.href')==base+'/'
 run('set','viewport','320','800');run('reload');run('wait','--fn','window.__introDone===true')
 assert ev('innerWidth===document.documentElement.scrollWidth')
 run('find','role','link','click','--name','3D 展場','--exact');run('wait','--fn','window.__cafe?.ready===true')
 assert ev('innerWidth===document.documentElement.scrollWidth')
 run('find','role','link','click','--name','← 返回活動頁','--exact');run('wait','--fn','window.__introDone===true')
 run('find','role','link','click','--name','回到設計總覽 ↗','--exact');run('wait','--fn',"document.querySelectorAll('article').length===11")
+assert ev('location.href')==base+'/designs/'
+assert ev('innerWidth===document.documentElement.scrollWidth')
+run('find','role','link','click','--name','緋夜劇場','--exact');run('wait','--fn','window.__introDone===true')
+assert ev('location.href')==base+'/versions/02-crimson-theatre/'
+run('find','role','link','click','--name','回到設計總覽 ↗','--exact');run('wait','--fn',"document.querySelectorAll('article').length===11")
+run('find','role','link','click','--name','前往活動首頁 · 緋幕手帖 ↗','--exact');run('wait','--fn','window.__introDone===true')
+assert ev('location.href')==base+'/'
+run('open',base+'/versions/11-theatre-scrapbook/?from=legacy#event');run('wait','--fn','window.__introDone===true')
+assert ev('location.href')==base+'/?from=legacy#event'
+run('find','role','link','click','--name','3D 展場','--exact');run('wait','--fn','window.__cafe?.ready===true')
+run('find','role','link','click','--name','所有設計版本','--exact');run('wait','--fn',"document.querySelectorAll('article').length===11")
+assert ev('location.href')==base+'/designs/'
 errors=run('errors');assert not errors.get('errors'),errors
-report={'status':'PASS','base':base,'styles':{'header':'02 crimson theatre','body':'theatre palette with paper collage','footer':'02 dark theatre'},'existingVersions':10,'totalVersions':11,'modelBytes':model['modelBytes'],'modelMeshes':model['meshes'],'landingDefers3DResources':True,'desktopInvitationTo3D':True,'mobileNavigationTo3D':True,'returnToActivity':True,'allVersionsAccessible':True,'pageErrors':errors.get('errors',[]),'notRun':['實體手機效能','使用者美術驗收']}
+report={'status':'PASS','base':base,'styles':{'header':'02 crimson theatre','body':'theatre palette with paper collage','footer':'02 dark theatre'},'homepage':'11-theatre-scrapbook','collectionPath':'/designs/','legacyRedirectPreservesQueryAndHash':True,'collectionToExistingVersionAndBack':True,'cafeToCollection':True,'existingVersions':10,'totalVersions':11,'modelBytes':model['modelBytes'],'modelMeshes':model['meshes'],'landingDefers3DResources':True,'desktopInvitationTo3D':True,'mobileNavigationTo3D':True,'returnToActivity':True,'allVersionsAccessible':True,'pageErrors':errors.get('errors',[]),'notRun':['實體手機效能','使用者美術驗收']}
 path=out/'remote-qa.json' if remote else root/'docs/combined-preview-qa.json'
 path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps(report,ensure_ascii=False,indent=2))

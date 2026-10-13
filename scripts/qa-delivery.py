@@ -13,8 +13,7 @@ class References(HTMLParser):
    if k in ['src','href'] and v and not v.startswith(('https:','#')):self.urls.append(v)
 versions=json.loads((root/'versions/catalog.json').read_text());assert len(versions)==11
 checked=set()
-for v in versions:
- url=base+'versions/'+v['slug']+'/'
+for url in [base,base+'designs/',*[base+'versions/'+v['slug']+'/' for v in versions]]:
  with urlopen(url) as r:html=r.read().decode();assert r.status==200
  parser=References();parser.feed(html)
  for ref in parser.urls:
@@ -30,7 +29,7 @@ def run(*args):
  return r.get('data',{})
 def ev(js):return run('eval',js).get('result')
 art=root/'artifacts/qa/delivery';art.mkdir(parents=True,exist_ok=True)
-run('set','media','light');run('set','viewport','1440','1000');run('open',base)
+run('set','media','light');run('set','viewport','1440','1000');run('open',base+'designs/')
 run('wait','--fn',"document.querySelectorAll('article').length===11")
 ev("(async()=>{for(const e of document.querySelectorAll('article')){e.scrollIntoView();await new Promise(r=>setTimeout(r,100));}window.scrollTo(0,0);return true})()")
 run('wait','--fn',"[...document.images].every(i=>i.complete&&i.naturalWidth>0)")
@@ -57,8 +56,8 @@ try:
  run('screenshot','--full',str(art/'resources-blocked.png'))
 finally:
  for pattern in blocked:run('network','unroute',pattern)
-run('set','viewport','1440','1000');run('set','media','light');run('open','http://127.0.0.1:4173/')
+run('set','viewport','1440','1000');run('set','media','light');run('open','http://127.0.0.1:4173/designs/')
 run('wait','--fn',"document.querySelectorAll('article').length===11")
-report={'status':'PASS','builtPages':len(versions),'localReferencesFetched':len(checked),'rawAssetsExcludedFromBuild':True,'gallery':{'pages':len(versions),'desktopImagesLoaded':len(versions),'mobileWidth':390,'horizontalOverflow':False},'keyboard':{'page':'10-cinema','skipLink':True,'carousel':True,'faq':True},'resourceFailure':{'page':'10-cinema','blocked':['GSAP and ScrollTrigger','WebP images'],'activityTextVisible':True,'faqOperable':True,'carouselStateOperable':True,'pageErrors':[]},'notRun':['實體手機效能','外部頁面內容驗收','素材延遲情境','使用者美術驗收']}
+report={'status':'PASS','builtPages':len(versions)+2,'homepageVersion':11,'collectionPath':'/designs/','localReferencesFetched':len(checked),'rawAssetsExcludedFromBuild':True,'gallery':{'pages':len(versions),'desktopImagesLoaded':len(versions),'mobileWidth':390,'horizontalOverflow':False},'keyboard':{'page':'10-cinema','skipLink':True,'carousel':True,'faq':True},'resourceFailure':{'page':'10-cinema','blocked':['GSAP and ScrollTrigger','WebP images'],'activityTextVisible':True,'faqOperable':True,'carouselStateOperable':True,'pageErrors':[]},'notRun':['實體手機效能','外部頁面內容驗收','素材延遲情境','使用者美術驗收']}
 (root/'docs/delivery-qa.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print('PASS built pages, local references, gallery, keyboard and resource failure fallback')

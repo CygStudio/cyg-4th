@@ -6,6 +6,11 @@
     "body": "theatre palette with paper collage",
     "footer": "02 dark theatre"
   },
+  "homepage": "11-theatre-scrapbook",
+  "collectionPath": "/designs/",
+  "legacyRedirectPreservesQueryAndHash": true,
+  "collectionToExistingVersionAndBack": true,
+  "cafeToCollection": true,
   "existingVersions": 10,
   "totalVersions": 11,
   "modelBytes": 1861616,

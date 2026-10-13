@@ -1,7 +1,9 @@
 {
   "status": "PASS",
-  "builtPages": 11,
-  "localReferencesFetched": 38,
+  "builtPages": 13,
+  "homepageVersion": 11,
+  "collectionPath": "/designs/",
+  "localReferencesFetched": 40,
   "rawAssetsExcludedFromBuild": true,
   "gallery": {
     "pages": 11,
