@@ -1,13 +1,14 @@
 export function mountMotion(config = {}) {
   const { gsap, ScrollTrigger } = window;
   const toggle = document.querySelector('.motion-toggle');
-  const preference = matchMedia('(prefers-reduced-motion: reduce)');
-  let manualOff = sessionStorage.getItem('cyg-motion-off') === 'true';
+  // Motion is enabled unless this visitor explicitly switched it off.
+  let manualOff = false;
+  try { manualOff = sessionStorage.getItem('cyg-motion-off') === 'true'; } catch { /* Storage may be unavailable; keep the default on. */ }
   let cleanup = () => {};
   function setup() {
     cleanup();
     window.__introDone = false;
-    const off = preference.matches || manualOff;
+    const off = manualOff;
     document.body.classList.toggle('motion-off', off);
     toggle.textContent = off ? '動態：關閉' : '動態：開啟';
     toggle.setAttribute('aria-pressed', String(!off));
@@ -42,8 +43,11 @@ export function mountMotion(config = {}) {
     cleanup = () => { observer.disconnect();document.removeEventListener('visibilitychange',visibility);ctx.revert(); };
     window.__motionReady = true;
   }
-  toggle.addEventListener('click',()=>{manualOff = !(preference.matches || manualOff);sessionStorage.setItem('cyg-motion-off',String(manualOff));setup();});
-  preference.addEventListener('change',setup);
+  toggle.addEventListener('click', () => {
+    manualOff = !manualOff;
+    try { sessionStorage.setItem('cyg-motion-off', String(manualOff)); } catch { /* The current-page choice still applies. */ }
+    setup();
+  });
   window.addEventListener('pagehide',()=>cleanup(),{once:true});
   document.querySelectorAll('details').forEach(el => el.addEventListener('toggle',()=>ScrollTrigger?.refresh()));
   document.querySelector('.copy-tag')?.addEventListener('click', async () => {

@@ -7,12 +7,11 @@ export function mountDrawer(header) {
   const content = dialog.querySelector('.drawer-content');
   const closeButton = dialog.querySelector('.menu-close');
   const mobile = matchMedia('(max-width: 760px)');
-  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   let tween;
   let scrollY = 0;
   let closing = false;
   let afterClose;
-  const animated = () => window.gsap && !reducedMotion.matches && !document.body.classList.contains('motion-off');
+  const animated = () => window.gsap && !document.body.classList.contains('motion-off');
 
   function finishClose(restoreFocus = true) {
     tween?.kill();
@@ -88,7 +87,13 @@ export function mountDrawer(header) {
   window.addEventListener('resize', () => {
     if (navigation.parentElement !== (mobile.matches ? content : header)) adapt();
   });
-  reducedMotion.addEventListener('change', () => { if (dialog.open && closing) finishClose(); });
+  new MutationObserver(() => {
+    if (!animated() && dialog.open) {
+      tween?.kill();
+      if (closing) finishClose();
+      else panel.style.removeProperty('transform');
+    }
+  }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
   window.addEventListener('pagehide', () => close({ immediate: true, restoreFocus: false }));
   adapt();
   header.classList.add('drawer-ready');

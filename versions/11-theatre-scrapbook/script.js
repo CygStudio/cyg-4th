@@ -10,7 +10,6 @@ backdrop.setAttribute('aria-hidden', 'true');
 header.prepend(backdrop);
 header.classList.add('has-backdrop');
 const parts = [...header.querySelectorAll('.nav-backdrop, .brand-mark, .brand b, .brand em, nav > *, .menu-toggle')];
-const preference = matchMedia('(prefers-reduced-motion: reduce)');
 mountDrawer(header);
 let resizeFrame;
 let navigationTween;
@@ -39,7 +38,7 @@ function measureNavigation() {
 
 function setCompact(compact, animate) {
   if (header.classList.contains('is-compact') === compact) return;
-  const motion = animate && window.gsap && !preference.matches && !document.body.classList.contains('motion-off');
+  const motion = animate && window.gsap && !document.body.classList.contains('motion-off');
   // Capture the currently rendered positions, including an interrupted transition.
   const activeParts = parts.filter(el => header.contains(el));
   const before = motion ? activeParts.map(el => ({ rect: el.getBoundingClientRect(), opacity: +getComputedStyle(el).opacity })) : [];

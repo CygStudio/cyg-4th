@@ -10,6 +10,7 @@ def ev(s):return run('eval',s).get('result')
 reports=[]
 for width in [320,390,760]:
  run('set','viewport',str(width),'844');run('set','media','light','reduced-motion');run('open',f'http://127.0.0.1:4173/?drawer=v3-{width}');run('wait','--fn','window.__introDone === true')
+ ev("if (!document.body.classList.contains('motion-off')) document.querySelector('.motion-toggle').click()")
  assert ev("document.documentElement.scrollWidth===innerWidth && document.querySelector('.menu-toggle').checkVisibility()")
  run('screenshot',str(out/f'{width}-closed.png'))
  ev("window.scrollTo({top:1000,behavior:'instant'})");run('click','.menu-toggle')

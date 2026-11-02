@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "defaultOnUnderReducedMotion": true,
+  "toggleBothDirections": true,
+  "explicitPreferencePersists": true,
+  "parallaxY": -18.9504,
+  "drawer": {
+    "middle": 18.3128,
+    "start": 100
+  },
+  "smoothScroll": {
+    "open": false,
+    "target": 4850.21875,
+    "y": 445
+  }
+}

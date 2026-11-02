@@ -1,6 +1,5 @@
 let tween;
-const preference = matchMedia('(prefers-reduced-motion: reduce)');
-const allowed = () => window.gsap && !preference.matches && !document.body.classList.contains('motion-off');
+const allowed = () => window.gsap && !document.body.classList.contains('motion-off');
 export function stopSectionScroll() { tween?.kill(); tween = null; }
 export function scrollToSection(target, hash) {
   stopSectionScroll();
@@ -21,5 +20,4 @@ export function scrollToSection(target, hash) {
 for (const name of ['wheel', 'touchstart']) window.addEventListener(name, stopSectionScroll, { passive: true });
 window.addEventListener('keydown', event => { if (['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) stopSectionScroll(); });
 window.addEventListener('pagehide', stopSectionScroll);
-preference.addEventListener('change', stopSectionScroll);
 new MutationObserver(() => { if (!allowed()) stopSectionScroll(); }).observe(document.body, { attributes: true, attributeFilter: ['class'] });

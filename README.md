@@ -97,6 +97,8 @@ node scripts/qa-cafe-touch.mjs http://127.0.0.1:4173/cafe/
 
 ## GitHub Pages 發佈
 
+依使用者於 2026-11-03 的授權，後續修改完成並通過相關檢查後，自動提交、推送 `main` 並部署；確認 Actions 成功及線上檔案更新後回報，不需再次等待部署指示。若使用者當次明確要求只討論、只分析或不要部署，則依當次指示處理。
+
 推送至 `main` 後，由 [.github/workflows/pages.yml](.github/workflows/pages.yml) 安裝固定相依套件、執行內容檢查與建置，再發佈 `dist/`。也可在 Actions 手動執行。網站資源使用相對路徑，支援 `/cyg-4th/` 專案子路徑。
 
 公開儲存庫保留原始素材、模型與完整版本歷史；Pages 只發佈建置輸出。發佈流程依 [GitHub 官方 Pages workflow 文件](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) 設定，Actions 固定於來源 commit，建置與部署分別授予所需權限。
