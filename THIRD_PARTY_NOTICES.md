@@ -31,3 +31,10 @@
 ## 小驢館研究照片
 
 ZAPX、Alina 愛琳娜與洪詩詩的照片版權仍屬原作者；下載不代表取得再散布授權。[來源清單](models/EN_LittleDonkey/ref/sources.json) 保留每張照片網址及雜湊。照片僅供本機研究與 Blender 參考，不作為 GLB 紋理，也不複製進 `dist/`。網頁預覽圖由本專案幾何模型自行渲染。
+
+## Lucide icons
+
+- Package: `lucide-static@1.66.0` (project-local, exact version in package-lock.json).
+- Source: https://github.com/lucide-icons/lucide
+- License: ISC; full upstream notice at `shared/LUCIDE-LICENSE.txt`.
+- `scripts/prepare-icons.mjs` extracts only the 20 used SVG icons into `shared/icons.css`; no icon font, CDN or runtime JavaScript is required.

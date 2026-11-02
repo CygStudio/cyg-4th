@@ -110,7 +110,7 @@ body {
   background: radial-gradient(ellipse at 22% 40%, #60253a, transparent 65%), #321020;
 }
 .story-album { position: relative; min-width: 0; padding: 20px 0; }
-.story-album::after { content: '✦'; position: absolute; right: 8%; top: 1%; font: 64px Georgia; color: var(--gold); }
+.story-album::after { content: ''; width: 1em; height: 1em; display: inline-block; background-color: currentColor; mask: var(--icon-sparkle) center / contain no-repeat; position: absolute; right: 8%; top: 1%; font: 64px Georgia; color: var(--gold); }
 .story-snapshot, .story-photo { position: relative; background: #fff9ed; color: #422822; padding: 12px 12px 18px; box-shadow: 4px 8px 18px #09050b66; }
 .story-snapshot { width: 72%; margin-left: 8%; transform: rotate(-4deg); }
 .story-snapshot img { width: 100%; height: auto; }
@@ -164,8 +164,8 @@ body {
 /* The closing returns to version 02's dark stage, gold type and quiet star. */
 .closing { padding: 85px 6vw 65px; background: #130b13; isolation: isolate; }
 .closing .closing-title { color: #d9b382; }
-.closing::before { content: '✦'; position: absolute; font: 220px Georgia; color: #ad6b3630; left: 7%; top: 30px; z-index: -1; pointer-events: none; }
-.closing::after { content: '✦'; position: absolute; font: 100px Georgia; color: #ad6b3626; right: 10%; bottom: 55px; z-index: -1; pointer-events: none; }
+.closing::before { content: ''; width: 1em; height: 1em; display: inline-block; background-color: currentColor; mask: var(--icon-sparkle) center / contain no-repeat; position: absolute; font: 220px Georgia; color: #ad6b3630; left: 7%; top: 30px; z-index: -1; pointer-events: none; }
+.closing::after { content: ''; width: 1em; height: 1em; display: inline-block; background-color: currentColor; mask: var(--icon-sparkle) center / contain no-repeat; position: absolute; font: 100px Georgia; color: #ad6b3626; right: 10%; bottom: 55px; z-index: -1; pointer-events: none; }
 .closing .tag { margin: 20px auto; }
 .copy-tag { border-color: #b58c5b; }
 .copy-tag:hover { background: #481329; }
@@ -304,14 +304,14 @@ html:has(body.motion-off) { scroll-behavior: auto !important; }
   box-shadow: 8px 10px 0 #130b13;
 }
 .credits-programme::before {
-  content: '✦';
+  content: ''; width: 1em; height: 1em; display: inline-block; background-color: currentColor; mask: var(--icon-sparkle) center / contain no-repeat;
   position: absolute;
   top: -18px;
   left: calc(50% - 24px);
   width: 48px;
   text-align: center;
   color: var(--gold);
-  background: #261020;
+  background-color: currentColor;
   font: 28px Georgia;
 }
 .credit-group { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 28px; padding: 30px 0; }

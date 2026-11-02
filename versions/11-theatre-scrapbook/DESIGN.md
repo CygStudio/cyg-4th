@@ -73,3 +73,7 @@
 繪師與宣傳圖署名已於 2026-11-02 透過 Google Drive 重新讀取[來源資料夾](https://drive.google.com/drive/folders/138Uk0x7wyfiulfkji0otl1KysJcy_R7a)核對：主視覺戶屋（@toyasan83）、Q 版 MEDO（@MEDOmedo_3JYO）、人形立牌奶油醬油（@CSS74134570）、趴著白玨（@BT871213）、直式 MidKat夜貓（@ymo0430）、宣傳圖製作施讚shihgood（@shihgood1027）。依資料夾標示建立 X 個人頁連結，未額外驗證帳號目前狀態。
 
 本次驗證見 `../../docs/credits-qa.json`；截圖位於 `../../artifacts/qa/credits/`。320、390、900、1440px 檢查署名文字、順序、分類順序與橫向溢位均通過；美術呈現仍待使用者驗收。
+
+## 圖示規範（2026-11-02）
+
+所有頁面以專案內固定版本 `lucide-static` 提供圖示，取代 emoji、星芒、愛心、箭頭及展場操作字元。透過 `scripts/prepare-icons.mjs` 擷取實際使用的 SVG，輸出共用 CSS mask；圖示沿用 currentColor 與文字尺寸，不依賴作業系統 emoji 字型或外部 CDN。裝飾圖示對輔助技術隱藏，圖示按鈕保留原有 aria-label。署名中的顏文字屬於名稱內容，保留原字樣。
