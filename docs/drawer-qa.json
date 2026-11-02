@@ -1,0 +1,33 @@
+{
+  "layouts": [
+    {
+      "width": 320,
+      "status": "PASS",
+      "focusTrap": true,
+      "escape": true,
+      "scrollRestored": true,
+      "anchor": true,
+      "resize": true
+    },
+    {
+      "width": 390,
+      "status": "PASS",
+      "focusTrap": true,
+      "escape": true,
+      "scrollRestored": true,
+      "anchor": true,
+      "resize": true
+    },
+    {
+      "width": 760,
+      "status": "PASS",
+      "focusTrap": true,
+      "escape": true,
+      "scrollRestored": true,
+      "anchor": true,
+      "resize": true
+    }
+  ],
+  "animatedDismissal": "PASS",
+  "humanAcceptance": "NOT RUN"
+}

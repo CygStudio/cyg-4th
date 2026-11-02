@@ -37,4 +37,4 @@ ZAPX、Alina 愛琳娜與洪詩詩的照片版權仍屬原作者；下載不代�
 - Package: `lucide-static@1.66.0` (project-local, exact version in package-lock.json).
 - Source: https://github.com/lucide-icons/lucide
 - License: ISC; full upstream notice at `shared/LUCIDE-LICENSE.txt`.
-- `scripts/prepare-icons.mjs` extracts only the 20 used SVG icons into `shared/icons.css`; no icon font, CDN or runtime JavaScript is required.
+- `scripts/prepare-icons.mjs` extracts only the 21 used SVG icons into `shared/icons.css`; no icon font, CDN or runtime JavaScript is required.

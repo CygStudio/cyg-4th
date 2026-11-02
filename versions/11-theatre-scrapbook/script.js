@@ -1,3 +1,4 @@
+import { mountDrawer } from './drawer.js';
 import { mountMotion } from '../../shared/motion.js';
 const header = document.querySelector('.site-header');
 const marquee = document.querySelector('.marquee');
@@ -7,8 +8,9 @@ backdrop.className = 'nav-backdrop';
 backdrop.setAttribute('aria-hidden', 'true');
 header.prepend(backdrop);
 header.classList.add('has-backdrop');
-const parts = [...header.querySelectorAll('.nav-backdrop, .brand-mark, .brand b, .brand em, nav > *')];
+const parts = [...header.querySelectorAll('.nav-backdrop, .brand-mark, .brand b, .brand em, nav > *, .menu-toggle')];
 const preference = matchMedia('(prefers-reduced-motion: reduce)');
+mountDrawer(header);
 let resizeFrame;
 let navigationTween;
 let measuredWidth;
@@ -38,18 +40,19 @@ function setCompact(compact, animate) {
   if (header.classList.contains('is-compact') === compact) return;
   const motion = animate && window.gsap && !preference.matches && !document.body.classList.contains('motion-off');
   // Capture the currently rendered positions, including an interrupted transition.
-  const before = motion ? parts.map(el => ({ rect: el.getBoundingClientRect(), opacity: +getComputedStyle(el).opacity })) : [];
+  const activeParts = parts.filter(el => header.contains(el));
+  const before = motion ? activeParts.map(el => ({ rect: el.getBoundingClientRect(), opacity: +getComputedStyle(el).opacity })) : [];
   clearNavigationTween();
   header.classList.toggle('is-compact', compact);
   if (!motion) return;
-  const after = parts.map(el => ({ rect: el.getBoundingClientRect(), opacity: +getComputedStyle(el).opacity }));
+  const after = activeParts.map(el => ({ rect: el.getBoundingClientRect(), opacity: +getComputedStyle(el).opacity }));
   header.classList.add('is-transitioning');
   navigationTween = window.gsap.timeline({
     defaults: { duration: .38, ease: 'power2.inOut' },
     onComplete: clearNavigationTween,
   });
   // Layout changes once; only transforms and opacity interpolate on each frame.
-  parts.forEach((el, i) => {
+  activeParts.forEach((el, i) => {
     const first = before[i], last = after[i];
     if (!first.rect.width || !last.rect.width) return;
     navigationTween.fromTo(el, {
@@ -63,6 +66,7 @@ function setCompact(compact, animate) {
 }
 
 function updateNavigation(animate = true) {
+  if (document.body.classList.contains('drawer-open')) return;
   // Hysteresis avoids switching repeatedly when scrolling around the boundary.
   if (window.scrollY > 96) setCompact(true, animate);
   else if (window.scrollY < 24) setCompact(false, animate);

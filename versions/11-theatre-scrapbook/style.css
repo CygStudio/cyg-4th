@@ -346,3 +346,28 @@ html:has(body.motion-off) { scroll-behavior: auto !important; }
   .supporter-list li { padding-block: 9px; }
   .credits .socials { justify-content: flex-start; }
 }
+
+/* Mobile navigation becomes a theatre-side drawer; the same nav serves both layouts. */
+.menu-toggle { display: none; }
+.mobile-menu { position: fixed; inset: 0; width: 100%; max-width: none; height: 100dvh; max-height: none; margin: 0; padding: 0; border: 0; background: transparent; color: var(--ink); overflow: hidden; }
+.mobile-menu::backdrop { background: #09050bb8; }
+.drawer-panel { margin-left: auto; width: min(88vw, 360px); height: 100%; overflow-y: auto; overscroll-behavior: contain; display: flex; flex-direction: column; padding: max(24px, env(safe-area-inset-top)) 28px max(28px, env(safe-area-inset-bottom)); background: linear-gradient(160deg, #481329, #1c1019 65%); border-left: 1px solid #9d7845; box-shadow: -12px 0 40px #09050b55; }
+.drawer-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 28px; border-bottom: 3px double #9d7845; }
+.drawer-heading h2 { font: 500 26px/1.5 var(--serif); color: var(--gold); }
+.menu-close, .menu-toggle { align-items: center; justify-content: center; width: 44px; height: 44px; flex-shrink: 0; color: var(--gold); border: 1px solid #9d784566; background: transparent; cursor: pointer; font-size: 24px; }
+.menu-close { display: inline-flex; }
+.drawer-content nav { display: flex; flex-direction: column; align-items: stretch; gap: 0; margin: 20px 0 32px; }
+.drawer-content nav a { display: flex; align-items: center; min-height: 64px; padding: 16px 0; border-bottom: 1px solid #d3b27133; font: 500 22px/1.5 var(--serif); letter-spacing: .05em; }
+.drawer-content nav a::after { display: none; }
+.drawer-content .exhibition-link { color: #f0c889; }
+.drawer-content .motion-toggle { align-self: flex-start; margin-top: 28px; min-height: 44px; padding: 10px 16px; color: #f3dfca; border-color: #9d7845; }
+.drawer-signature { margin-top: auto; padding-top: 28px; font: 14px/1.8 var(--serif); letter-spacing: .18em; color: #c5b1a7; }
+body.drawer-open { position: fixed; top: var(--drawer-scroll); width: 100%; overflow: hidden; }
+@media (max-width: 760px) {
+  .site-header.drawer-ready { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; gap: 16px; }
+  .site-header.drawer-ready .menu-toggle { display: inline-flex; }
+  .site-header.drawer-ready .brand em { display: block; }
+  .site-header.drawer-ready.is-compact { padding-block: 8px; }
+  .site-header.drawer-ready.is-compact .brand em { opacity: 1; }
+  .header-slot { height: var(--header-height, 76px); }
+}
