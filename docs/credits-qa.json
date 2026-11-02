@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "width": 1440,
+      "status": "PASS",
+      "entries": 46,
+      "order": "top-to-bottom then next column",
+      "overflow": false,
+      "xLinks": [
+        "https://x.com/toyasan83",
+        "https://x.com/MEDOmedo_3JYO",
+        "https://x.com/CSS74134570",
+        "https://x.com/BT871213",
+        "https://x.com/ymo0430",
+        "https://x.com/shihgood1027"
+      ]
+    },
+    {
+      "width": 900,
+      "status": "PASS",
+      "entries": 46,
+      "order": "top-to-bottom then next column",
+      "overflow": false,
+      "xLinks": [
+        "https://x.com/toyasan83",
+        "https://x.com/MEDOmedo_3JYO",
+        "https://x.com/CSS74134570",
+        "https://x.com/BT871213",
+        "https://x.com/ymo0430",
+        "https://x.com/shihgood1027"
+      ]
+    },
+    {
+      "width": 390,
+      "status": "PASS",
+      "entries": 46,
+      "order": "top-to-bottom then next column",
+      "overflow": false,
+      "xLinks": [
+        "https://x.com/toyasan83",
+        "https://x.com/MEDOmedo_3JYO",
+        "https://x.com/CSS74134570",
+        "https://x.com/BT871213",
+        "https://x.com/ymo0430",
+        "https://x.com/shihgood1027"
+      ]
+    },
+    {
+      "width": 320,
+      "status": "PASS",
+      "entries": 46,
+      "order": "top-to-bottom then next column",
+      "overflow": false,
+      "xLinks": [
+        "https://x.com/toyasan83",
+        "https://x.com/MEDOmedo_3JYO",
+        "https://x.com/CSS74134570",
+        "https://x.com/BT871213",
+        "https://x.com/ymo0430",
+        "https://x.com/shihgood1027"
+      ]
+    }
+  ],
+  "humanArtAcceptance": "NOT RUN"
+}

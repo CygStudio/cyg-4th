@@ -291,3 +291,58 @@ html:has(body.motion-off) { scroll-behavior: auto !important; }
   .site-header.is-compact nav { margin-top: 6px; }
   .site-header.is-compact .motion-toggle { top: 8px; }
 }
+
+/* Curtain-call programme: roles read down the page, names down each column. */
+.section.credits { display: block; background: #261020; }
+.credits-intro { text-align: center; margin-bottom: 42px; }
+.credits-intro p { margin-inline: auto; }
+.credits-programme {
+  position: relative;
+  padding: 20px clamp(24px, 5vw, 68px);
+  border: 4px double #9d7845;
+  background: linear-gradient(90deg, #48132944, transparent 18%, transparent 82%, #48132944), #1c1019;
+  box-shadow: 8px 10px 0 #130b13;
+}
+.credits-programme::before {
+  content: '✦';
+  position: absolute;
+  top: -18px;
+  left: calc(50% - 24px);
+  width: 48px;
+  text-align: center;
+  color: var(--gold);
+  background: #261020;
+  font: 28px Georgia;
+}
+.credit-group { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 28px; padding: 30px 0; }
+.credit-group + .credit-group { border-top: 1px solid #d3b27133; }
+.credit-group h3 { color: var(--gold); font: 500 21px/1.8 var(--serif); letter-spacing: .08em; }
+.credits .organizer-name { margin: 0; color: #f3dfca; font: 500 30px/1.4 var(--serif); }
+.credits .credit-pending { margin: 0; color: #c5b1a7; font-size: 15px; }
+.artist-credits, .supporter-list { list-style: none; padding: 0; margin: 0; }
+.artist-credits li { display: grid; grid-template-columns: 90px minmax(0, 1fr); align-items: baseline; gap: 16px; }
+.artist-credits li + li { margin-top: 16px; }
+.credit-work { color: #c5b1a7; font-size: 13px; }
+.artist-credits a { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 20px; width: fit-content; min-height: 32px; }
+.credit-name { font-size: 19px; }
+.credit-handle { font-size: 13px; color: #d3b271; overflow-wrap: anywhere; }
+.artist-credits a:hover .credit-name { text-decoration: underline; text-underline-offset: 5px; }
+.supporter-list { columns: 3; column-gap: 30px; column-rule: 1px solid #d3b27122; }
+.supporter-list li { break-inside: avoid; padding: 8px 0; font-size: 16px; line-height: 1.6; overflow-wrap: anywhere; }
+.credits .socials { justify-content: center; margin-top: 36px; }
+@media (max-width: 1100px) {
+  .supporter-list { columns: 2; }
+  .credit-group { grid-template-columns: 110px minmax(0, 1fr); gap: 24px; }
+}
+@media (max-width: 760px) {
+  .credits-intro { margin-bottom: 32px; text-align: left; }
+  .credits-programme { padding: 12px 24px; box-shadow: 5px 6px 0 #130b13; }
+  .credit-group { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 26px 0; }
+  .credit-group h3 { font-size: 19px; }
+  .artist-credits li { grid-template-columns: 64px minmax(0, 1fr); gap: 12px; }
+  .artist-credits a { flex-direction: column; align-items: flex-start; gap: 4px; width: 100%; }
+  .credit-name { font-size: 18px; }
+  .supporter-list { columns: 1; }
+  .supporter-list li { padding-block: 9px; }
+  .credits .socials { justify-content: flex-start; }
+}
