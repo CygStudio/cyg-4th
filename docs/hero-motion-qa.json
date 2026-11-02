@@ -1,0 +1,59 @@
+{
+  "layouts": [
+    {
+      "width": 390,
+      "entry": {
+        "first": {
+          "image": 0,
+          "title": 0
+        },
+        "next": {
+          "image": 0.6448,
+          "title": 0
+        }
+      },
+      "parallax": {
+        "character": -18.9504,
+        "copy": -10.4227,
+        "word": 26.5306
+      },
+      "scroll": {
+        "first": {
+          "open": true,
+          "y": 0
+        },
+        "middle": {
+          "open": false,
+          "y": 167
+        }
+      },
+      "reducedMotion": "PASS"
+    },
+    {
+      "width": 1440,
+      "entry": {
+        "first": {
+          "image": 0,
+          "title": 0
+        },
+        "next": {
+          "image": 0.6509,
+          "title": 0
+        }
+      },
+      "parallax": {
+        "character": -40.9574,
+        "copy": -22.5266,
+        "word": 57.3404
+      },
+      "scroll": {
+        "first": 0,
+        "middle": 90
+      },
+      "reducedMotion": "PASS"
+    }
+  ],
+  "scrollInterruption": "PASS",
+  "motionToggleCleanup": "PASS",
+  "humanMotionAcceptance": "NOT RUN"
+}

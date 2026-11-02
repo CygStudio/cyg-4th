@@ -1,3 +1,4 @@
+import { scrollToSection, stopSectionScroll } from './section-scroll.js';
 export function mountDrawer(header) {
   const toggle = header.querySelector('.menu-toggle');
   const navigation = header.querySelector('nav');
@@ -10,6 +11,7 @@ export function mountDrawer(header) {
   let tween;
   let scrollY = 0;
   let closing = false;
+  let afterClose;
   const animated = () => window.gsap && !reducedMotion.matches && !document.body.classList.contains('motion-off');
 
   function finishClose(restoreFocus = true) {
@@ -23,23 +25,28 @@ export function mountDrawer(header) {
     panel.style.removeProperty('transform');
     closing = false;
     if (restoreFocus && mobile.matches) toggle.focus({ preventScroll: true });
+    const complete = afterClose;
+    afterClose = null;
+    complete?.();
   }
-  function close({ immediate = false, restoreFocus = true } = {}) {
+  function close({ immediate = false, restoreFocus = true, complete } = {}) {
     if (!dialog.open || closing && !immediate) return;
     tween?.kill();
     closing = true;
+    afterClose = complete;
     if (immediate || !animated()) finishClose(restoreFocus);
-    else tween = window.gsap.to(panel, { xPercent: 100, duration: .22, ease: 'power2.in', onComplete: () => finishClose(restoreFocus) });
+    else tween = window.gsap.to(panel, { xPercent: 100, duration: .3, ease: 'power2.in', onComplete: () => finishClose(restoreFocus) });
   }
   function open() {
     if (!mobile.matches || dialog.open) return;
+    stopSectionScroll();
     scrollY = window.scrollY;
     document.body.style.setProperty('--drawer-scroll', `-${scrollY}px`);
     document.body.classList.add('drawer-open');
     dialog.showModal();
     toggle.setAttribute('aria-expanded', 'true');
     closeButton.focus({ preventScroll: true });
-    if (animated()) tween = window.gsap.fromTo(panel, { xPercent: 100 }, { xPercent: 0, duration: .3, ease: 'power3.out' });
+    if (animated()) tween = window.gsap.fromTo(panel, { xPercent: 100 }, { xPercent: 0, duration: .48, ease: 'power3.out' });
   }
   function adapt() {
     close({ immediate: true, restoreFocus: false });
@@ -64,17 +71,17 @@ export function mountDrawer(header) {
   navigation.addEventListener('click', event => {
     const link = event.target.closest('a');
     if (!link || !dialog.open) return;
-    close({ immediate: true, restoreFocus: false });
+    if (closing) { event.preventDefault(); event.stopPropagation(); return; }
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     const href = link.getAttribute('href');
     if (href.startsWith('#')) {
       const target = document.querySelector(href);
       if (!target) return;
       event.preventDefault();
-      history.pushState(null, '', href);
-      target.setAttribute('tabindex', '-1');
-      target.focus({ preventScroll: true });
-      target.addEventListener('blur', () => target.removeAttribute('tabindex'), { once: true });
-      target.scrollIntoView({ behavior: animated() ? 'smooth' : 'instant' });
+      event.stopPropagation();
+      close({ restoreFocus: false, complete: () => scrollToSection(target, href) });
+    } else {
+      close({ immediate: true, restoreFocus: false });
     }
   });
   mobile.addEventListener('change', adapt);

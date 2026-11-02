@@ -1,3 +1,4 @@
+import { scrollToSection } from './section-scroll.js';
 import { mountDrawer } from './drawer.js';
 import { mountMotion } from '../../shared/motion.js';
 const header = document.querySelector('.site-header');
@@ -91,4 +92,49 @@ new MutationObserver(() => {
 }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
 window.addEventListener('pagehide', clearNavigationTween);
 
-mountMotion({intro(tl){tl.from('.curtain.left',{xPercent:-35,duration:1.4}).from('.curtain.right',{xPercent:35,duration:1.4},0).from('.stage-character',{y:65,opacity:0,duration:1.5},.3).from('.stage-side',{y:40,opacity:0,stagger:.2},.4).from('.hero-copy > *',{y:25,opacity:0,stagger:.12},.7)},ambient(g){return [g.to('.spot-a',{rotation:18,duration:7,repeat:-1,yoyo:true,ease:'sine.inOut'}),g.to('.spot-b',{rotation:-18,duration:8,repeat:-1,yoyo:true,ease:'sine.inOut'})]}});
+// One scroll controller serves drawer links, desktop navigation and hero actions.
+document.addEventListener('click', event => {
+  const link = event.target.closest('a[href^="#"]');
+  if (!link || link.classList.contains('skip') || event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  const hash = link.getAttribute('href');
+  const target = hash.length > 1 ? document.querySelector(hash) : null;
+  if (!target) return;
+  event.preventDefault();
+  scrollToSection(target, hash);
+});
+
+mountMotion({
+  intro(tl) {
+    tl.addLabel('stage', 0)
+      .from('.stage-arch', { scale: .94, opacity: 0, duration: 1.2, transformOrigin: '50% 60%' }, 'stage')
+      .from('.stage-word', { opacity: 0, duration: 1.3 }, 'stage+=.15')
+      .from('.curtain.left', { xPercent: -65, duration: 1.5, ease: 'power3.inOut' }, 'stage')
+      .from('.curtain.right', { xPercent: 65, duration: 1.5, ease: 'power3.inOut' }, 'stage')
+      .from('.spot', { opacity: 0, duration: 1.2 }, 'stage+=.25')
+      .addLabel('character', .3)
+      .from('.stage-character img', { y: 70, scale: .96, opacity: 0, duration: 1.5, ease: 'power3.out' }, 'character')
+      .from('.left-type', { x: -24, opacity: 0, duration: 1 }, 'character+=.25')
+      .from('.right-type', { x: 24, opacity: 0, duration: 1 }, 'character+=.4')
+      .addLabel('invitation', .75)
+      .from('.hero-copy > .eyebrow', { y: 16, opacity: 0, duration: .7 }, 'invitation')
+      .from('.hero h1', { y: 32, opacity: 0, duration: 1 }, 'invitation+=.12')
+      .from('.hero-copy > p, .hero-date, .hero-actions', { y: 20, opacity: 0, duration: .8, stagger: .12 }, 'invitation+=.35');
+  },
+  ambient(g) {
+    return [g.to('.spot-a', { rotation: 18, duration: 7, repeat: -1, yoyo: true, ease: 'sine.inOut' }),
+      g.to('.spot-b', { rotation: -18, duration: 8, repeat: -1, yoyo: true, ease: 'sine.inOut' })];
+  },
+  scroll(g, ScrollTrigger) {
+    // Entry moves the character image and copy children; scroll moves their containers.
+    const depth = value => () => value * (innerWidth <= 760 ? .45 : 1);
+    g.timeline({ defaults: { ease: 'none' }, scrollTrigger: {
+      id: 'hero-depth', trigger: '.hero', start: 'top top', end: 'bottom top', scrub: .65, invalidateOnRefresh: true,
+    } })
+      .to('.stage-word', { y: depth(140) }, 0)
+      .to('.stage-arch', { y: depth(85) }, 0)
+      .to('.stage-character', { y: depth(-100) }, 0)
+      .to('.stage-side', { y: depth(-150) }, 0)
+      .to('.hero-copy', { y: depth(-55) }, 0)
+      .to('.curtain', { y: depth(-35) }, 0);
+  },
+});
