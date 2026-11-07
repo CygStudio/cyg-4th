@@ -55,8 +55,8 @@ for width in [320, 390, 600, 768, 820, 1024, 1440]:
         return Math.min(x.right,y.right)-Math.max(x.left,y.left)>1 && Math.min(x.bottom,y.bottom)-Math.max(x.top,y.top)>1;
       };
       const overlap = [];
-      for (const selector of ['.event-grid','.exhibition-invite','.story','.gift-rules','.credits','.site-header nav']) {
-        const children = [...document.querySelector(selector).children].filter(e=>e.getClientRects().length);
+      for (const selector of ['.event-grid','.story','.gift-rules','.credits','.site-header nav']) {
+        const children = [...(document.querySelector(selector)?.children ?? [])].filter(e=>e.getClientRects().length);
         for (let i=0;i<children.length;i++) for (let j=i+1;j<children.length;j++) {
           if (intersect(children[i],children[j])) overlap.push({selector,a:labels(children[i]),b:labels(children[j])});
         }

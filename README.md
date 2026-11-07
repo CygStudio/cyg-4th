@@ -5,7 +5,6 @@
 ## 線上預覽
 
 - [活動首頁：11 緋幕手帖](https://cygstudio.github.io/cyg-4th/)
-- [小驢館獨立 3D 展場](https://cygstudio.github.io/cyg-4th/cafe/)
 - [內部設計總覽：全部 11 個版本](https://cygstudio.github.io/cyg-4th/designs/)
 - [GitHub 儲存庫](https://github.com/CygStudio/cyg-4th)
 
@@ -75,7 +74,7 @@ python3 scripts/qa-delivery.py
 
 ## 小驢館 3D 空間手帖
 
-活動首頁 `/` 採用 11 緋幕手帖，HTML 位於根目錄 `index.html`，樣式與動畫仍位於 `versions/11-theatre-scrapbook/`。舊版網址 `/versions/11-theatre-scrapbook/` 保留轉址，並保留查詢參數與錨點。`/designs/` 為內部比較使用的獨立設計總覽，首頁及 3D 展場不提供入口連結；從首頁導覽列或空間照片卡可進入 `/cafe/` 獨立展場。
+活動首頁 `/` 採用 11 緋幕手帖，HTML 位於根目錄 `index.html`，樣式與動畫仍位於 `versions/11-theatre-scrapbook/`。舊版網址 `/versions/11-theatre-scrapbook/` 保留轉址，並保留查詢參數與錨點。`/designs/` 為內部比較使用的獨立設計總覽，首頁及 3D 展場不提供入口連結。展場完成前，活動首頁與設計總覽均不提供展場連結。
 
 開啟 `/cafe/`，使用五個視角、拖曳／雙指縮放、鍵盤方向鍵與縮放按鈕探索空間。Three.js 0.186.1 在瀏覽器套用三階賽璐璐明暗及幾何描邊；模型本身保留可攜的基礎色材質。GLB 不含 Blender 專用 Shader to RGB 節點，其他檢視器不會自動呈現相同賽璐璐效果。
 
