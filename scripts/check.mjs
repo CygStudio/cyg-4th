@@ -1,6 +1,6 @@
 import { readdir, readFile, stat } from 'node:fs/promises';
 import { resolve } from 'node:path';
-const required = ['熙歌四週年應援咖啡廳','#四季熙光皆成歌','11/23','11/29','13:00','18:00','Little Donkey Cafe 小驢館','信義路四段265巷12弄21號','信義安和站','200<span>預計發放總量','40<span>預計發放總量','週一至週五每日 25 份','週六 35 份 · 週日 40 份','週六 20 份 · 週日 20 份','一杯飲品','號碼牌','<strong>16:00</strong> 起停止入場，只出不進。','<strong>16:30</strong> 活動正式結束。','DoritosMountaindewMaster4','https://x.com/cyg_studio_fan','https://x.com/cygnusxdfp','https://youtube.com/@cygnusxdfp'];
+const required = ['熙歌四週年應援咖啡廳','#四季熙光皆成歌','11/23','11/29','13:00','18:00','Little Donkey Cafe 小驢館','信義路四段265巷12弄21號','信義安和站','200<span>預計發放總量','40<span>預計發放總量','週一至週五每日 25 份','週六 35 份 · 週日 40 份','週六 20 份 · 週日 20 份','一杯飲品','號碼牌','<strong>16:00</strong> 起停止入場，僅出不進。','<strong>16:30</strong> 活動正式結束。','DoritosMountaindewMaster4','https://x.com/cyg_studio_fan','https://x.com/cygnusxdfp','https://youtube.com/@cygnusxdfp'];
 const dirs = (await readdir('versions',{withFileTypes:true})).filter(x=>x.isDirectory());
 for (const {name} of dirs) {
   const path = 'versions/' + name;
