@@ -25,7 +25,6 @@
 .page-left{border-radius:8px 0 0 3px;background-color:#eee7df;box-shadow:inset -15px 0 30px #4d303312}
 .page-right{border-radius:0 6px 3px 0;box-shadow:inset 18px 0 25px #4d303318}
 .hand-note{grid-column:1/-1;font:25px var(--serif);color:#913551;margin-bottom:12px;transform:rotate(-4deg)}
-.book-page .piece:before{content:'';position:absolute;z-index:2;left:38%;top:-5px;width:64px;height:20px;background:#c997936b;transform:rotate(-10deg);clip-path:polygon(2% 0,96% 2%,100% 90%,3% 100%)}
 .book-page .piece-postcard,.book-page .piece-ticket{grid-column:1/-1}
 .book-page .piece-postcard .object{height:230px;transform:rotate(5deg)}
 .book-page .piece-ticket .object{height:110px;transform:rotate(-5deg)}
@@ -72,9 +71,6 @@
 .page-right .piece-nfc .object{height:135px;transform:rotate(-5deg)}
 .page-right .awaiting{grid-column:4/7;grid-row:4;align-self:center;flex-direction:column;border:0;padding:0;text-align:center;gap:10px}
 .page-right .awaiting strong{font-size:21px}
-.book-page .piece:before{display:none}
-.book-page .piece-postcard:before,.book-page .piece-ticket:before{display:block;top:10px;left:25%}
-.book-page .piece-ticket:before{left:65%;transform:rotate(9deg)}
 .page-right .hand-note{margin-left:5px;transform:rotate(3deg)}
 @media(max-width:1100px) and (min-width:761px){.page-right .piece-sand .object{height:290px}
 .page-right .piece-holder .object{height:165px}
@@ -99,7 +95,6 @@
 .prop-3{left:7%;width:34%;top:0;bottom:22%;background:#ede4d8;border:6px double #bd9c87;transform:rotate(-6deg);box-shadow:0 10px 20px #0005}
 .prop-3{bottom:auto;height:290px}
 .page-right .awaiting>span{font-size:12px}
-.book-page .piece-postcard:before,.book-page .piece-ticket:before{top:-9px}
 .proposal-b :is(button,summary):focus-visible{outline:3px solid #963653}
 @media(max-width:760px){.flip{min-height:44px;min-width:64px}}
 /* Selected B: neutral whites, restrained yellow, a slightly more vivid charm. */
@@ -109,15 +104,11 @@
 .proposal-b .piece-leather img{filter:brightness(1.045) saturate(1.14) contrast(1.025) drop-shadow(0 10px 10px #482c3033)}
 .proposal-b .piece-bookmark .object{height:300px}
 .proposal-b .page-left .piece-pvc{align-self:center}
-.proposal-b .object{perspective:1100px}
-.proposal-b .object img{transform-origin:50% 50%;backface-visibility:hidden}
+
+
 
 @media(max-width:1100px){.proposal-b .piece-bookmark .object{height:255px}}
 @media(max-width:760px){.proposal-b .piece-bookmark .object{height:250px}}
-
-.book-page .piece-postcard:before,.book-page .piece-ticket:before{display:none}
-.merch-tape{position:absolute;z-index:2;left:25%;top:-9px;width:64px;height:20px;background:#c997936b;transform:rotate(-10deg);clip-path:polygon(2% 0,96% 2%,100% 90%,3% 100%);pointer-events:none}
-.piece-ticket .merch-tape{left:65%;transform:rotate(9deg)}
 .proposal-b .collection-title>p{margin-inline:auto}
 .flip{min-height:44px;cursor:pointer}
 

@@ -24,7 +24,7 @@ for (const path of ['index.html', 'designs/index.html', 'versions/11-theatre-scr
   const html = await readFile(path, 'utf8');
   for (const [, url] of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
     if (url.startsWith('http') || url.startsWith('#') || url.includes('${') || url.includes('vendor/')) continue;
-    await stat(resolve(path, '..', url));
+    await stat(resolve(path, '..', url.split(/[?#]/)[0]));
   }
 }
 console.log('PASS homepage, design collection and cafe local references');
