@@ -1,0 +1,461 @@
+{
+  "archive": "週邊-20261116T083208Z-1-001.zip",
+  "archiveSha256": "20dacd34b34e39990aab73c4ec5f1f5b8a025ec94d164ffafee22e33742417a3",
+  "photos": [
+    {
+      "name": "postcard-front",
+      "source": "明信片(1).png",
+      "sha256": "4b7ac6e8c4c4deab0f99bfeb9a90fcbc86065bb59dc28a8ec31f89cd33141f83",
+      "originalSize": [
+        4005,
+        3136
+      ],
+      "crop": null,
+      "variants": [
+        {
+          "path": "assets/web/merch/postcard-front-640.webp",
+          "size": [
+            640,
+            501
+          ],
+          "bytes": 57216
+        },
+        {
+          "path": "assets/web/merch/postcard-front-1400.webp",
+          "size": [
+            1400,
+            1096
+          ],
+          "bytes": 212408
+        }
+      ]
+    },
+    {
+      "name": "postcard-back",
+      "source": "明信片.png",
+      "sha256": "5a83577fa3ea8e5187ee3c7017db4a4a737c73a8853a82ea039c17ebf9b5d2f4",
+      "originalSize": [
+        3853,
+        2691
+      ],
+      "crop": null,
+      "variants": [
+        {
+          "path": "assets/web/merch/postcard-back-640.webp",
+          "size": [
+            640,
+            447
+          ],
+          "bytes": 27850
+        },
+        {
+          "path": "assets/web/merch/postcard-back-1400.webp",
+          "size": [
+            1400,
+            978
+          ],
+          "bytes": 78488
+        }
+      ]
+    },
+    {
+      "name": "ticket-front",
+      "source": "雷射票.png",
+      "sha256": "fc9b1c37202d7a6886ed8efc7325d43c12b0aa92735cb930fdcfdfb8f379e332",
+      "originalSize": [
+        3937,
+        1374
+      ],
+      "crop": null,
+      "variants": [
+        {
+          "path": "assets/web/merch/ticket-front-640.webp",
+          "size": [
+            640,
+            223
+          ],
+          "bytes": 43188
+        },
+        {
+          "path": "assets/web/merch/ticket-front-1400.webp",
+          "size": [
+            1400,
+            489
+          ],
+          "bytes": 161298
+        }
+      ]
+    },
+    {
+      "name": "ticket-back",
+      "source": "雷射票背面.png",
+      "sha256": "58b2b5c71478e3b5c7ba72a23362f76065cf1e139ff399d64e6209fcf3c08add",
+      "originalSize": [
+        3904,
+        1474
+      ],
+      "crop": null,
+      "variants": [
+        {
+          "path": "assets/web/merch/ticket-back-640.webp",
+          "size": [
+            640,
+            242
+          ],
+          "bytes": 20304
+        },
+        {
+          "path": "assets/web/merch/ticket-back-1400.webp",
+          "size": [
+            1400,
+            529
+          ],
+          "bytes": 59302
+        }
+      ]
+    },
+    {
+      "name": "bookmark-front",
+      "source": "書籤.jpg",
+      "sha256": "06c1cf73fa2ed29e855240e2a4ddaf54168b679051de77ad8a7c8a2052145547",
+      "originalSize": [
+        2160,
+        2880
+      ],
+      "crop": [
+        620,
+        350,
+        1570,
+        2690
+      ],
+      "variants": [
+        {
+          "path": "assets/web/merch/bookmark-front-640.webp",
+          "size": [
+            260,
+            640
+          ],
+          "bytes": 22336
+        },
+        {
+          "path": "assets/web/merch/bookmark-front-1400.webp",
+          "size": [
+            568,
+            1400
+          ],
+          "bytes": 71794
+        }
+      ]
+    },
+    {
+      "name": "bookmark-back",
+      "source": "書籤(1).jpg",
+      "sha256": "cbfa77f689ebe265f08828166cb9329d27f8271b64c5378940f2a47da68e5f4e",
+      "originalSize": [
+        2160,
+        2880
+      ],
+      "crop": [
+        570,
+        180,
+        1550,
+        2660
+      ],
+      "variants": [
+        {
+          "path": "assets/web/merch/bookmark-back-640.webp",
+          "size": [
+            253,
+            640
+          ],
+          "bytes": 8504
+        },
+        {
+          "path": "assets/web/merch/bookmark-back-1400.webp",
+          "size": [
+            553,
+            1400
+          ],
+          "bytes": 27764
+        }
+      ]
+    },
+    {
+      "name": "pvc-front",
+      "source": "PVC透卡.png",
+      "sha256": "791c531d0e944f44ad8d2f6cb7d74925497382c0b497bfe4c7ac704cd3736d9d",
+      "originalSize": [
+        2007,
+        2847
+      ],
+      "crop": [
+        110,
+        0,
+        1920,
+        2847
+      ],
+      "variants": [
+        {
+          "path": "assets/web/merch/pvc-front-640.webp",
+          "size": [
+            407,
+            640
+          ],
+          "bytes": 42758
+        },
+        {
+          "path": "assets/web/merch/pvc-front-1400.webp",
+          "size": [
+            890,
+            1400
+          ],
+          "bytes": 114694
+        }
+      ]
+    },
+    {
+      "name": "nfc-front",
+      "source": "NFC卡片(1).jpg",
+      "sha256": "05cf49264c6141fcb8d463e41399b2528074bcabd855a54be392c0a87b09ff0c",
+      "originalSize": [
+        2880,
+        2160
+      ],
+      "crop": [
+        180,
+        330,
+        2600,
+        1940
+      ],
+      "variants": [
+        {
+          "path": "assets/web/merch/nfc-front-640.webp",
+          "size": [
+            640,
+            426
+          ],
+          "bytes": 59164
+        },
+        {
+          "path": "assets/web/merch/nfc-front-1400.webp",
+          "size": [
+            1400,
+            931
+          ],
+          "bytes": 206400
+        }
+      ]
+    },
+    {
+      "name": "nfc-back",
+      "source": "NFC卡片.jpg",
+      "sha256": "e0e7728c93a4e42589edca7e262eca08ab5a3364ed1df86f08fa51069c4c2501",
+      "originalSize": [
+        2880,
+        2160
+      ],
+      "crop": [
+        460,
+        410,
+        2380,
+        1740
+      ],
+      "variants": [
+        {
+          "path": "assets/web/merch/nfc-back-640.webp",
+          "size": [
+            640,
+            443
+          ],
+          "bytes": 16464
+        },
+        {
+          "path": "assets/web/merch/nfc-back-1400.webp",
+          "size": [
+            1400,
+            970
+          ],
+          "bytes": 58518
+        }
+      ]
+    },
+    {
+      "name": "leather-front",
+      "source": "皮革吊飾.png",
+      "sha256": "818fddee48313fdce2a22c706b3487f7f7db0cb17549813a9d5bc55a0e2633ee",
+      "originalSize": [
+        768,
+        1024
+      ],
+      "crop": [
+        100,
+        40,
+        605,
+        850
+      ],
+      "variants": [
+        {
+          "path": "assets/web/merch/leather-front-640.webp",
+          "size": [
+            399,
+            640
+          ],
+          "bytes": 40006
+        },
+        {
+          "path": "assets/web/merch/leather-front-1400.webp",
+          "size": [
+            505,
+            810
+          ],
+          "bytes": 48826
+        }
+      ]
+    },
+    {
+      "name": "leather-back",
+      "source": "皮革吊飾(1).png",
+      "sha256": "81552f41472d92f9fcc8d3a0580b90449cdd3fb27116fc63ff8d7c752e1d9409",
+      "originalSize": [
+        2152,
+        1614
+      ],
+      "crop": [
+        390,
+        330,
+        1980,
+        1260
+      ],
+      "variants": [
+        {
+          "path": "assets/web/merch/leather-back-640.webp",
+          "size": [
+            640,
+            374
+          ],
+          "bytes": 49154
+        },
+        {
+          "path": "assets/web/merch/leather-back-1400.webp",
+          "size": [
+            1400,
+            819
+          ],
+          "bytes": 131344
+        }
+      ]
+    },
+    {
+      "name": "holder-front",
+      "source": "票卡夾.png",
+      "sha256": "30b4be411ead113062c510e13d5adcfaf11a08d7ab2b006c61f8cca055ba2237",
+      "originalSize": [
+        1767,
+        2773
+      ],
+      "crop": null,
+      "variants": [
+        {
+          "path": "assets/web/merch/holder-front-640.webp",
+          "size": [
+            408,
+            640
+          ],
+          "bytes": 37414
+        },
+        {
+          "path": "assets/web/merch/holder-front-1400.webp",
+          "size": [
+            892,
+            1400
+          ],
+          "bytes": 116958
+        }
+      ]
+    },
+    {
+      "name": "holder-back",
+      "source": "票卡夾(1).png",
+      "sha256": "3fa12d937f1c2616bfacef31acd799510d46c788e74567431dcd78ae6810b78c",
+      "originalSize": [
+        1646,
+        2514
+      ],
+      "crop": null,
+      "variants": [
+        {
+          "path": "assets/web/merch/holder-back-640.webp",
+          "size": [
+            419,
+            640
+          ],
+          "bytes": 85382
+        },
+        {
+          "path": "assets/web/merch/holder-back-1400.webp",
+          "size": [
+            917,
+            1400
+          ],
+          "bytes": 303038
+        }
+      ]
+    },
+    {
+      "name": "sand-front",
+      "source": "流沙.png",
+      "sha256": "3908c27723db26b5fe2c2ee1d8dbe8825943a20d662da5c8b54705d03b874686",
+      "originalSize": [
+        1903,
+        2783
+      ],
+      "crop": null,
+      "variants": [
+        {
+          "path": "assets/web/merch/sand-front-640.webp",
+          "size": [
+            438,
+            640
+          ],
+          "bytes": 63488
+        },
+        {
+          "path": "assets/web/merch/sand-front-1400.webp",
+          "size": [
+            957,
+            1400
+          ],
+          "bytes": 201792
+        }
+      ]
+    },
+    {
+      "name": "sand-back",
+      "source": "流沙背.png",
+      "sha256": "a2874e79314304348877b8f5f15b68db49aa7ef2171571c063fbd265c6a0ad41",
+      "originalSize": [
+        1962,
+        3031
+      ],
+      "crop": null,
+      "variants": [
+        {
+          "path": "assets/web/merch/sand-back-640.webp",
+          "size": [
+            414,
+            640
+          ],
+          "bytes": 43104
+        },
+        {
+          "path": "assets/web/merch/sand-back-1400.webp",
+          "size": [
+            906,
+            1400
+          ],
+          "bytes": 146700
+        }
+      ]
+    }
+  ]
+}

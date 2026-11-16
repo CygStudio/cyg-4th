@@ -7,3 +7,6 @@ dist/
 *.log
 
 artifacts/
+
+# User-supplied merchandise source archive (not a deployable asset).
+週邊-20261116T083208Z-1-001.zip
