@@ -412,7 +412,7 @@ body.drawer-open { position: fixed; top: var(--drawer-scroll); width: 100%; over
 /* Public-facing event identity; keep the activity name readable at every width. */
 .hero h1{font-size:clamp(36px,4.2vw,62px);line-height:1.25;letter-spacing:.06em}
 .hero h1 span{display:inline-block}.hero h1 span+span{margin-left:.3em}
-.hero-copy>.hero-theme{font:500 clamp(21px,2.3vw,30px)/1.4 var(--serif);color:#e6bd7e;margin:10px auto 0;letter-spacing:.12em}
+
 .hero-copy>.hero-invitation{font-size:14px;margin:6px auto 12px}
 .credits-subtitle{color:var(--gold);font-size:18px}
-@media(max-width:760px){.hero h1 span{display:block}.hero h1 span+span{margin-left:0}.hero h1{font-size:clamp(30px,8vw,42px)}.hero-copy>.hero-theme{font-size:21px}.hero-copy{padding-top:20px}}
+@media(max-width:760px){.hero h1 span{display:block}.hero h1 span+span{margin-left:0}.hero h1{font-size:clamp(30px,8vw,42px)}.hero-copy{padding-top:20px}}

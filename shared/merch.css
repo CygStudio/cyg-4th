@@ -133,3 +133,5 @@
 .page-right .piece-nfc{align-self:center}
 @media(max-width:1100px){.page-right .piece-q-sand .object{height:200px}}
 @media(max-width:760px){.page-right .piece-q-sand .object{height:185px}}
+.proposal-b .object{perspective:1100px}
+.proposal-b .object img{transform-origin:50% 50%;backface-visibility:hidden}
