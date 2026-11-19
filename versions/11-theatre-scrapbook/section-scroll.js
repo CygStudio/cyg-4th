@@ -3,6 +3,7 @@ const allowed = () => window.gsap && !document.body.classList.contains('motion-o
 export function stopSectionScroll() { tween?.kill(); tween = null; }
 export function scrollToSection(target, hash) {
   stopSectionScroll();
+  if (target.matches("details")) target.open = true;
   if (location.hash !== hash) history.pushState(null, '', hash);
   const offset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--compact-header-height')) || 72;
   const destination = Math.max(0, Math.min(document.documentElement.scrollHeight - innerHeight, target.getBoundingClientRect().top + scrollY - offset - 18));

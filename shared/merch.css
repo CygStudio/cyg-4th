@@ -135,3 +135,23 @@
 @media(max-width:760px){.page-right .piece-q-sand .object{height:185px}}
 .proposal-b .object{perspective:1100px}
 .proposal-b .object img{transform-origin:50% 50%;backface-visibility:hidden}
+
+/* The programme keeps the essentials visible; the full allocation unfolds below. */
+.event .proposal-rules{margin-top:40px;border-color:var(--line);scroll-margin-top:100px}
+.event .proposal-rules summary{padding:24px 0;align-items:center}
+.event .proposal-rules summary::-webkit-details-marker{display:none}
+.event .proposal-rules summary::after{color:var(--red);width:22px;height:22px;flex-shrink:0}
+.rules-summary{display:grid;gap:10px}
+.rules-title{font:500 clamp(22px,2.3vw,30px)/1.5 var(--serif);color:var(--ink)}
+.rules-teaser{font-size:14px;line-height:1.9;max-width:48em}
+.rules-action{font-size:13px;color:var(--red);text-decoration:underline;text-underline-offset:4px}
+.proposal-rules:not([open]) .when-open,.proposal-rules[open] .when-closed{display:none}
+.event .rules-content{padding-top:20px;border-top:1px solid var(--line)}
+.event .rules-content :is(h3,caption){color:var(--red)}
+.event .rules-content thead th{color:#77513b}
+.event .rules-content :is(th,td){border-color:var(--line)}
+.event .rules-content .rule-note{color:#65483d}
+.event .rules-source{color:var(--red);font-size:14px;line-height:1.8}
+.merch-rules-link{text-align:center;margin:32px 0 0;font-size:15px}
+.merch-rules-link a{color:var(--gold);text-decoration:underline;text-underline-offset:6px}
+@media(max-width:760px){.event .proposal-rules{margin-top:28px}.event .rules-columns{gap:20px}.rules-title{font-size:22px}.event .rules-content table{font-size:14px}}

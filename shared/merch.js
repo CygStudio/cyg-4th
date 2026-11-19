@@ -62,3 +62,11 @@ document.querySelectorAll('.proposal-b .flip').forEach(button => {
 new MutationObserver(() => {
   if (document.body.classList.contains('motion-off')) finishFlips.forEach(finish => finish());
 }).observe(document.body, {attributes:true, attributeFilter:['class']});
+
+// A direct rules link also exposes its content on reload or history navigation.
+function revealLinkedRules() {
+  if (location.hash === '#merch-rules') document.getElementById('merch-rules').open = true;
+}
+revealLinkedRules();
+window.addEventListener('hashchange', revealLinkedRules);
+document.getElementById('merch-rules')?.addEventListener('toggle', () => window.ScrollTrigger?.refresh());
