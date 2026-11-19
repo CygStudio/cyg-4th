@@ -1,0 +1,47 @@
+{
+  "archive": "drive-download-20261119T132913Z-1-001.zip",
+  "archiveSha256": "990026692fc5a9338e982ccd8fad53e107a1569645f30f1cf7369cd348446ec9",
+  "processing": "ICC to sRGB, transparent-margin crop, max 1100px, WebP quality 90; original alpha preserved; display tone via CSS",
+  "photos": [
+    {
+      "source": "Q流沙.png",
+      "sourceSha256": "3c2be7195f1535ea60623beea1a84b6bea3e255448cb9be914f60658577ff479",
+      "sourceSize": [
+        2343,
+        3634
+      ],
+      "crop": [
+        0,
+        0,
+        2343,
+        3634
+      ],
+      "output": "assets/web/merch-book/q-sand-front.webp",
+      "size": [
+        709,
+        1100
+      ],
+      "bytes": 182742
+    },
+    {
+      "source": "Q流沙背面.png",
+      "sourceSha256": "33feda497fb0fa229566800d32be7a72c2858a15f1b98dfae15f9e0b44ee16c0",
+      "sourceSize": [
+        2351,
+        3323
+      ],
+      "crop": [
+        34,
+        0,
+        2312,
+        3308
+      ],
+      "output": "assets/web/merch-book/q-sand-back.webp",
+      "size": [
+        757,
+        1100
+      ],
+      "bytes": 201446
+    }
+  ]
+}

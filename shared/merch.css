@@ -126,3 +126,10 @@
 .rules-source,.visit-notice a,.reminders a{color:var(--gold);text-decoration:underline;text-underline-offset:5px}
 .admission{background:#22101c}.admission .section-heading p{margin-top:20px;color:#d9c8c4}.admission-rules{margin:28px 0 32px;max-width:850px}.admission-rules ul{padding-left:1.4em}.admission-rules li{padding:5px 0}.admission-end{border-top:1px solid #d3b27155;margin-top:30px;padding-top:22px}.admission td:last-child{white-space:nowrap}
 @media(max-width:760px){.rules-columns{grid-template-columns:1fr;gap:28px}.rules-content h3{font-size:24px}.rules-content :is(th,td),.admission :is(th,td){padding:10px 4px;font-size:14px}.admission .section-heading h2{font-size:34px}.admission-rules{margin-top:22px}}
+/* Q sand completes the right-hand page beside the NFC card. */
+.page-right .piece-q-sand{grid-column:4/7;grid-row:4;align-self:center}
+.page-right .piece-q-sand .object{height:230px;transform:rotate(4deg)}
+.proposal-b .piece-q-sand img{filter:url(#sand-yellow) brightness(1.055) contrast(1.02) drop-shadow(0 10px 10px #482c3033)}
+.page-right .piece-nfc{align-self:center}
+@media(max-width:1100px){.page-right .piece-q-sand .object{height:200px}}
+@media(max-width:760px){.page-right .piece-q-sand .object{height:185px}}
