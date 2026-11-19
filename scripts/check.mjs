@@ -6,7 +6,7 @@ for (const {name} of dirs) {
   const path = 'versions/' + name;
   const htmlDir = name === '11-theatre-scrapbook' ? '.' : path;
   const html = await readFile(htmlDir+'/index.html','utf8');
-  const terms = name === '11-theatre-scrapbook' ? required.map(term => ({'200<span>預計發放總量':'預計 200 份','40<span>預計發放總量':'預計 40 份','週六 35 份 · 週日 40 份':'週六 35 份、週日 40 份','週六 20 份 · 週日 20 份':'週六、週日各 20 份'}[term] || term)) : required;
+  const terms = name === '11-theatre-scrapbook' ? required.filter(term => !['200<span>預計發放總量','40<span>預計發放總量','週一至週五每日 25 份','週六 35 份 · 週日 40 份','週六 20 份 · 週日 20 份'].includes(term)).concat(['限定周邊・6 選 1','已訂閱熙歌 YouTube 頻道的畫面','當日 45 份','當日 30 份','6 種各 10 個','6 種各 20 個','每個時段','當日餘量將併入隔日發放','每組 20 人','店內活動時間為 50 分鐘','座位保留 10 分鐘','15:00–16:20']) : required;
   for(const term of terms) if(!html.includes(term)) throw new Error(name+' missing '+term);
   for(const f of ['DESIGN.md','style.css','script.js','version.json']) await stat(path+'/'+f);
   for (const [,url] of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
