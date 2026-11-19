@@ -65,8 +65,23 @@ new MutationObserver(() => {
 
 // A direct rules link also exposes its content on reload or history navigation.
 function revealLinkedRules() {
-  if (location.hash === '#merch-rules') document.getElementById('merch-rules').open = true;
+  const target = location.hash.length > 1 ? document.getElementById(location.hash.slice(1)) : null;
+  if (target?.matches('details')) target.open = true;
 }
 revealLinkedRules();
 window.addEventListener('hashchange', revealLinkedRules);
 document.getElementById('merch-rules')?.addEventListener('toggle', () => window.ScrollTrigger?.refresh());
+
+// Closing from the bottom of a long drawer keeps its heading in view.
+document.querySelectorAll('.drawer-close').forEach(button => button.addEventListener('click', () => {
+  const drawer = button.closest('details');
+  const summary = drawer.querySelector('summary');
+  const offset = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--compact-header-height')) || 72) + 18;
+  const top = summary.getBoundingClientRect().top;
+  drawer.open = false;
+  summary.focus({ preventScroll: true });
+  if (top < offset) window.scrollTo({ top: top + scrollY - offset, behavior: 'instant' });
+}));
+document.querySelectorAll('.info-drawer').forEach(drawer => drawer.addEventListener('transitionend', event => {
+  if (event.pseudoElement === '::details-content') window.ScrollTrigger?.refresh();
+}));
